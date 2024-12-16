@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на прием в стоматологическую клинику</title>
+</head>
+<body>
+    <header>
+        <img src="images/zub-logo.png" alt="Логотип" width="80" height="80">
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="service.html">Услуги</a></li>
+                <li><a href="patient.html">Пациенту</a></li>
+                <li><a href="record.html">Запись</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class ="recording">
+            <h1>Запись на прием</h1>
+            <p>Чтобы записаться на прием к стоматологу, пожалуйста, заполните форму ниже.</p>
+            <img src="images/appointment.jpg" alt="Запись на прием" width="800" height="500" />
+
+            <h2>Форма записи</h2>
+            <form>
+                <label for="fullName">ФИО:</label><br>
+                <input type="text" id="fullName" name="fullName" required placeholder="Введите ваше ФИО"><br><br>
+                
+                <label for="phone">Телефон:</label><br>
+                <input type="tel" id="phone" name="phone" required placeholder="Введите ваш телефон"><br><br>
+                
+                <label for="preferredDate">Предпочтительная дата:</label><br>
+                <input type="date" id="preferredDate" name="preferredDate" required><br><br>
+                
+                <label for="preferredTime">Предпочтительное время:</label><br>
+                <input type="time" id="preferredTime" name="preferredTime" required><br><br>
+
+                <label for="service">Выберите услугу:</label><br>
+                <select id="service" name="service">
+                    <option value="другие">Другое</option>
+                    <option value="лечение зубов">Лечение зубов</option>
+                    <option value="гигиена">Профилактическая гигиена</option>
+                    <option value="ортодонтия">Ортодонтия</option>
+                </select><br><br>
+
+                <button type="submit">Записаться на прием</button>
+            </form>
+
+            <h2>Контакты</h2>
+            <div class = "information">
+                <p>Москва, Эшпая 1А</p>
+                <p>С 09:00 - 20:00, пн-сб</p>
+                <p>Телефон: +7 900 787 87 87</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

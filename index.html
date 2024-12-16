@@ -10,23 +10,79 @@
         <img src="images/zub-logo.png" alt="Логотип" width="80" height="80">
         <nav>
             <ul>
-                <li> <a href="file:///E:/progekt/index.html">Главная</a></li>
-                <li> <a href="">Услуги</a></li>
-                <li> <a href="">Пациенту</a></li>
-                <li> <a href="">Запись</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="service.html">Услуги</a></li>
+                <li><a href="patient.html">Пациенту</a></li>
+                <li><a href="record.html">Запись</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div>
+        <div class = "slogo">
             <p>Dental Studio-это место, где заботятся о вашей улыбке, используя передовые технологии и индивидуальный подход к каждому пациенту.</p> 
             <img src="images/glavnoe foto.avif" alt="Фото на главном экране" width="500" height="500">
         </div>
-         <button>Услуги</button>
-         <button>Записаться</button>
+        <form id="form1" runat="server">
+            <div class = "dentistry">
+                <h1>Стоматология в Москва</h1>
+                <h2>О нас</h2>
+                <img src="images/pervaya foto.jpg" alt="Стоматология" width="800" height="500" />
+                <p>Лечение зубов в тот же день!</p>
+                <p>Мы проведем полную консультацию, профессиональную гигиену полости рта и лечение зубов и десен.</p>
+
+                <h2>Услуги</h2>
+                <div class = "services">
+                    <img src="images/protezirovanie.jpg" alt="Услуги стоматологии" width="500" height="500"/>
+                    <ul>
+                        <li>Лечение зубов</li>
+                        <li>Профилактическая гигиена полости рта</li>
+                        <li>Ортодонтия (брекеты)</li>
+                        <li>Детская стоматология</li>
+                        <li>Имплантация зубов</li>
+                        <li>Изготовление и установка виниров</li>
+                        <li>Протезирование зубов</li>
+                        <li>Хирургические вмешательства</li>
+                    </ul>
+                </div>
+
+                <h2>Специалисты</h2>
+                <div class = "specialistic">
+                    <img src="images/specialists.jpg" alt="Специалисты" />
+                    <h3>Иванова Анна Сергеевна</h3>
+                    <p>Главный врач, Врач ортодонт. Стаж: 11 лет.</p>
+                    <h3>Степанова Марина Альбертовна</h3>
+                    <p>Врач стоматолог-терапевт. Стаж: более 25 лет.</p>
+                    <h3>Шевченко Павел Анатольевич</h3>
+                    <p>Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 15 лет.</p>
+                    <h3>Киренко Дмитрий Степанович</h3>
+                    <p>Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 10 лет.</p>
+                    <h3>Терушкина Елена Дмитриевна</h3>
+                    <p>Врач стоматолог-детский. Стаж: более 10 лет.</p>
+                </div>
+
+                <h3>Лицензии и сертификаты</h3>
+                <div class = "certificat">
+                    <img scr="images/certificat1.jpg" alt="" width="500" height="500"/>
+                </div>
+
+                <h2>Контакты</h2>
+                <div class = "contact">
+                    <p>Москва, Эшпая 1А</p>
+                    <p>С 09:00 - 20:00, пн-сб</p>
+                    <p>Телефон: +7 900 787 87 87</p>
+                </div>
+
+                <h2>Онлайн консультация</h2>
+                <div class = "consultacion">
+                    <p>Укажите ваш номер телефона для обратного звонка:</p>
+                    <asp:TextBox ID="PhoneNumber" runat="server" placeholder="Введите номер телефона"></asp:TextBox>
+                    <asp:Button ID="CallBackButton" runat="server" Text="Заказать звонок" OnClick="CallBackButton_Click" />
+                </div>
+                <div>
+                    <asp:Button ID="AppointmentButton" runat="server" Text="Записаться на приём" OnClick="AppointmentButton_Click" />
+                </div>
+            </div>
+        </form>
     </main>
-    <footer>
-        Подвал
-    </footer>
 </body>
 </html>

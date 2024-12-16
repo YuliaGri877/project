@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги стоматологической клиники</title>
+</head>
+<body>
+    <header>
+        <img src="images/zub-logo.png" alt="Логотип" width="80" height="80">
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="service.html">Услуги</a></li>
+                <li><a href="patient.html">Пациенту</a></li>
+                <li><a href="record.html">Запись</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class = "services">
+            <h1>Наши Услуги</h1>
+            <p>Мы предлагаем широкий спектр стоматологических услуг, чтобы обеспечить здоровье и красоту вашей улыбки.</p>
+            <img src="images/услуги.jpg" alt="Услуги стоматологии" width="800" height="500" />
+
+            <h2>Перечень услуг</h2>
+            <ul>
+                <li>Лечение зубов</li>
+                <li>Профилактическая гигиена полости рта</li>
+                <li>Ортодонтия (брекеты)</li>
+                <li>Детская стоматология</li>
+                <li>Имплантация зубов</li>
+                <li>Изготовление и установка виниров</li>
+                <li>Протезирование зубов</li>
+                <li>Хирургические вмешательства</li>
+            </ul>
+
+            <h2>Специальные предложения</h2>
+            <p>У нас имеются специальные предложения и скидки на определенные процедуры. Позвоните нам для получения дополнительной информации!</p>
+
+            <h3>Контакты</h3>
+            <div class = "information">
+                <p>Москва, Эшпая 1А</p>
+                <p>С 09:00 - 20:00, пн-сб</p>
+                <p>Телефон: +7 900 787 87 87</p>
+            </div>
+
+            <h2>Онлайн консультация</h2>
+            <div class = "consultation">
+                <p>Укажите ваш номер телефона для обратного звонка:</p>
+                <asp:TextBox ID="PhoneNumber" runat="server" placeholder="Введите номер телефона"></asp:TextBox>
+                <asp:Button ID="CallBackButton" runat="server" Text="Заказать звонок" OnClick="CallBackButton_Click" />
+            </div>
+            <div class = "recording">
+                <asp:Button ID="AppointmentButton" runat="server" Text="Записаться на приём" OnClick="AppointmentButton_Click" />
+            </div>
+        </div>
+    </main>
+</body>
+</html>
