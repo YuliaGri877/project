@@ -6,80 +6,80 @@
     <title>Сайт стоматологической клиники</title>
 </head>
 <body>
-    <header>
-        <img src="images/zub-logo.png" alt="Логотип" width="80" height="80">
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="service.html">Услуги</a></li>
-                <li><a href="patient.html">Пациенту</a></li>
-                <li><a href="record.html">Запись</a></li>
+    <header class="header">
+        <img src="images/zub-logo.png" alt="Логотип" class="header__logo" width="80" height="80">
+        <nav class="nav">
+            <ul class="nav__sections">
+                <li class="nav__item"><a href="index.html">Главная</a></li>
+                <li class="nav__item"><a href="service.html">Услуги</a></li>
+                <li class="nav__item"><a href="patient.html">Пациенту</a></li>
+                <li class="nav__item"><a href="record.html">Запись</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class = "slogo">
-            <p>Dental Studio-это место, где заботятся о вашей улыбке, используя передовые технологии и индивидуальный подход к каждому пациенту.</p> 
-            <img src="images/glavnoe foto.avif" alt="Фото на главном экране" width="500" height="500">
+    <main class="main">
+        <div class="main__intro">
+            <p class="main__description">Dental Studio - это место, где заботятся о вашей улыбке, используя передовые технологии и индивидуальный подход к каждому пациенту.</p> 
+            <img src="images/glavnoe foto.avif" alt="Фото на главном экране" class="main__image" width="500" height="500">
         </div>
-        <form id="form1" runat="server">
-            <div class = "dentistry">
-                <h1>Стоматология в Москва</h1>
-                <h2>О нас</h2>
-                <img src="images/pervaya foto.jpg" alt="Стоматология" width="800" height="500" />
-                <p>Лечение зубов в тот же день!</p>
-                <p>Мы проведем полную консультацию, профессиональную гигиену полости рта и лечение зубов и десен.</p>
+        <form id="form1" runat="server" class="form">
+            <div class="form__dentistry">
+                <h1 class="form__title">Стоматология в Москва</h1>
+                <h2 class="form__subtitle">О нас</h2>
+                <img src="images/pervaya foto.jpg" alt="Стоматология" class="form__image" width="800" height="500" />
+                <p class="form__service-description">Лечение зубов в тот же день!</p>
+                <p class="form__service-description">Мы проведем полную консультацию, профессиональную гигиену полости рта и лечение зубов и десен.</p>
 
-                <h2>Услуги</h2>
-                <div class = "services">
-                    <img src="images/protezirovanie.jpg" alt="Услуги стоматологии" width="500" height="500"/>
-                    <ul>
-                        <li>Лечение зубов</li>
-                        <li>Профилактическая гигиена полости рта</li>
-                        <li>Ортодонтия (брекеты)</li>
-                        <li>Детская стоматология</li>
-                        <li>Имплантация зубов</li>
-                        <li>Изготовление и установка виниров</li>
-                        <li>Протезирование зубов</li>
-                        <li>Хирургические вмешательства</li>
+                <h2 class="form__subtitle">Услуги</h2>
+                <div class="form__services">
+                    <img src="images/protezirovanie.jpg" alt="Услуги стоматологии" class="form__services-image" width="500" height="500"/>
+                    <ul class="form__services-list">
+                        <li class="form__services-item">Лечение зубов</li>
+                        <li class="form__services-item">Профилактическая гигиена полости рта</li>
+                        <li class="form__services-item">Ортодонтия (брекеты)</li>
+                        <li class="form__services-item">Детская стоматология</li>
+                        <li class="form__services-item">Имплантация зубов</li>
+                        <li class="form__services-item">Изготовление и установка виниров</li>
+                        <li class="form__services-item">Протезирование зубов</li>
+                        <li class="form__services-item">Хирургические вмешательства</li>
                     </ul>
                 </div>
 
-                <h2>Специалисты</h2>
-                <div class = "specialistic">
-                    <img src="images/specialists.jpg" alt="Специалисты" />
-                    <h3>Иванова Анна Сергеевна</h3>
-                    <p>Главный врач, Врач ортодонт. Стаж: 11 лет.</p>
-                    <h3>Степанова Марина Альбертовна</h3>
-                    <p>Врач стоматолог-терапевт. Стаж: более 25 лет.</p>
-                    <h3>Шевченко Павел Анатольевич</h3>
-                    <p>Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 15 лет.</p>
-                    <h3>Киренко Дмитрий Степанович</h3>
-                    <p>Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 10 лет.</p>
-                    <h3>Терушкина Елена Дмитриевна</h3>
-                    <p>Врач стоматолог-детский. Стаж: более 10 лет.</p>
+                <h2 class="form__subtitle">Специалисты</h2>
+                <div class="form__specialists">
+                    <img src="images/specialists.jpg" alt="Специалисты" class="form__specialists-image"/>
+                    <h3 class="form__specialist-name">Иванова Анна Сергеевна</h3>
+                    <p class="form__specialist-description">Главный врач, Врач ортодонт. Стаж: 11 лет.</p>
+                    <h3 class="form__specialist-name">Степанова Марина Альбертовна</h3>
+                    <p class="form__specialist-description">Врач стоматолог-терапевт. Стаж: более 25 лет.</p>
+                    <h3 class="form__specialist-name">Шевченко Павел Анатольевич</h3>
+                    <p class="form__specialist-description">Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 15 лет.</p>
+                    <h3 class="form__specialist-name">Киренко Дмитрий Степанович</h3>
+                    <p class="form__specialist-description">Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 10 лет.</p>
+                    <h3 class="form__specialist-name">Терушкина Елена Дмитриевна</h3>
+                    <p class="form__specialist-description">Врач стоматолог-детский. Стаж: более 10 лет.</p>
                 </div>
 
-                <h3>Лицензии и сертификаты</h3>
-                <div class = "certificat">
-                    <img scr="images/certificat1.jpg" alt="" width="500" height="500"/>
+                <h3 class="form__subtitle">Лицензии и сертификаты</h3>
+                <div class="form__certificates">
+                    <img src="images/certificat1.jpg" alt="Сертификаты" class="form__certificates-image" width="500" height="500"/>
                 </div>
 
-                <h2>Контакты</h2>
-                <div class = "contact">
-                    <p>Москва, Эшпая 1А</p>
-                    <p>С 09:00 - 20:00, пн-сб</p>
-                    <p>Телефон: +7 900 787 87 87</p>
+                <h2 class="form__subtitle">Контакты</h2>
+                <div class="form__contact">
+                    <p class="form__contact-address">Москва, Эшпая 1А</p>
+                    <p class="form__contact-hours">С 09:00 - 20:00, пн-сб</p>
+                    <p class="form__contact-phone">Телефон: +7 900 787 87 87</p>
                 </div>
 
-                <h2>Онлайн консультация</h2>
-                <div class = "consultacion">
-                    <p>Укажите ваш номер телефона для обратного звонка:</p>
-                    <asp:TextBox ID="PhoneNumber" runat="server" placeholder="Введите номер телефона"></asp:TextBox>
-                    <asp:Button ID="CallBackButton" runat="server" Text="Заказать звонок" OnClick="CallBackButton_Click" />
+                <h2 class="form__subtitle">Онлайн консультация</h2>
+                <div class="form__consultation">
+                    <p class="form__consultation-description">Укажите ваш номер телефона для обратного звонка:</p>
+                    <input type="text" class="form__consultation-input" placeholder="Введите номер телефона" />
+                    <button class="form__consultation-button">Заказать звонок</button>
                 </div>
-                <div>
-                    <asp:Button ID="AppointmentButton" runat="server" Text="Записаться на приём" OnClick="AppointmentButton_Click" />
+                <div class="form__appointment">
+                    <button class="form__appointment-button">Записаться на приём</button>
                 </div>
             </div>
         </form>
