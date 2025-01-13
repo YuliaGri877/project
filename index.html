@@ -11,22 +11,22 @@
         <nav class="nav">
             <ul class="nav__sections">
                 <li class="nav__item"><a href="index.html">Главная</a></li>
-                <li class="nav__item"><a href="service.html">Услуги</a></li>
-                <li class="nav__item"><a href="patient.html">Пациенту</a></li>
-                <li class="nav__item"><a href="record.html">Запись</a></li>
+                <li class="nav__item"><a href="services.html">Услуги</a></li>
+                <li class="nav__item"><a href="patients.html">Пациенту</a></li>
+                <li class="nav__item"><a href="appointments.html">Запись</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <div class="main__intro">
             <p class="main__description">Dental Studio - это место, где заботятся о вашей улыбке, используя передовые технологии и индивидуальный подход к каждому пациенту.</p> 
-            <img src="images/glavnoe foto.avif" alt="Фото на главном экране" class="main__image" width="500" height="500">
+            <img src="images/glavnoe_foto.avif" alt="Фото на главном экране" class="main__image" width="500" height="500">
         </div>
-        <form id="form1" runat="server" class="form">
+        <form id="consultation-form" action="/" class="form">
             <div class="form__dentistry">
-                <h1 class="form__title">Стоматология в Москва</h1>
+                <h1 class="form__title">Стоматология в Москве</h1>
                 <h2 class="form__subtitle">О нас</h2>
-                <img src="images/pervaya foto.jpg" alt="Стоматология" class="form__image" width="800" height="500" />
+                <img src="images/pervaya_foto.jpg" alt="Стоматология" class="form__image" width="800" height="500" />
                 <p class="form__service-description">Лечение зубов в тот же день!</p>
                 <p class="form__service-description">Мы проведем полную консультацию, профессиональную гигиену полости рта и лечение зубов и десен.</p>
 
@@ -69,7 +69,7 @@
                 <div class="form__contact">
                     <p class="form__contact-address">Москва, Эшпая 1А</p>
                     <p class="form__contact-hours">С 09:00 - 20:00, пн-сб</p>
-                    <p class="form__contact-phone">Телефон: +7 900 787 87 87</p>
+                    <p class="form__contact-phone">Телефон: <a href="tel:+79007878787">+7 900 787 87 87</a></p>
                 </div>
 
                 <h2 class="form__subtitle">Онлайн консультация</h2>
@@ -84,5 +84,9 @@
             </div>
         </form>
     </main>
+    <footer class="footer">
+        <p class="footer__text">© 2025 Dental Studio. Все права защищены.</p>
+        <p class="footer__address">Москва, Эшпая 1А</p>
+    </footer>
 </body>
 </html>
