@@ -1,0 +1,124 @@
+/* Основные стили для main */
+.main {
+    width: 1766.29px;
+    height: 628.51px;
+    top: 107.69px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+/* Стили для введенного текста и заголовков */
+.main__title {
+    width: 351.85px;
+    height: 108.17px;
+    top: 298.46px;
+    left: 130px;
+    gap: 0px;
+    opacity: 0px;
+    background: #1A3444;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50.01px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+
+}
+
+.main__subtitle {
+    color: #004d40;
+    /* Более темный цвет для подзаголовков */
+    font-size: 20px;
+    /* Размер шрифта для подзаголовков */
+    margin: 15px 0;
+    /* Отступы сверху и снизу */
+}
+
+.main__description {
+    color: #333;
+    /* Цвет текста для описания */
+    font-size: 16px;
+    /* Общий размер шрифта */
+    margin-bottom: 20px;
+    /* Отступ снизу */
+}
+
+/* Стили для изображений */
+.main__image,
+.form__image,
+.form__services-image,
+.form__specialists-image,
+.form__certificates-image {
+    max-width: 100%;
+    /* Ограничение ширины изображений */
+    height: auto;
+    /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px;
+    /* Закругленные углы изображений */
+    margin: 10px 0;
+    /* Отступы сверху и снизу */
+}
+
+/* Стили для форм */
+.form {
+    background-color: #ffffff;
+    /* Белый фон для формы */
+    border: 1px solid #b2ebf2;
+    /* Светло-голубая рамка */
+    border-radius: 8px;
+    /* Закругленные углы формы */
+    padding: 20px;
+    /* Внутренние отступы для формы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Легкая тень для формы */
+}
+
+/* Стили для элементов списка */
+.form__services-list {
+    list-style-type: disc;
+    /* Маркеры в виде кружков */
+    margin-left: 20px;
+    /* Отступ слева для списка */
+}
+
+/* Стили для кнопок */
+.form__consultation-button,
+.form__appointment-button {
+    background-color: #00796b;
+    /* Цвет кнопок */
+    color: #ffffff;
+    /* Цвет текста на кнопках */
+    border: none;
+    /* Убрать рамку */
+    padding: 10px 20px;
+    /* Внутренние отступы */
+    border-radius: 5px;
+    /* Закругленные углы кнопок */
+    cursor: pointer;
+    /* Курсор при наведении */
+    transition: background-color 0.3s;
+    /* Плавный переход при наведении */
+}
+
+.form__consultation-button:hover,
+.form__appointment-button:hover {
+    background-color: #004d40;
+    /* Темный цвет при наведении на кнопки */
+}
+
+/* Стили для контактной информации */
+.form__contact {
+    margin-top: 20px;
+    /* Отступ сверху */
+}
+
+.form__contact-address,
+.form__contact-hours,
+.form__contact-phone {
+    margin: 5px 0;
+    /* Отступы для каждого абзаца контактной информации */
+    color: #555;
+    /* Цвет текста для контактной информации */
+}
