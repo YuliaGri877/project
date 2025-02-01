@@ -6,11 +6,11 @@
 
 html,
 body {
-    font-family: 'Arial', sans-serif;
+    font-family:'saira' 'Arial', sans-serif;
     font-size: 18px;
     line-height: 30px;
-    color: #000000;
-    background-color: #ffffff;
+    color: #1A3444;
+    background-color: #fefefe;
     overflow-x: hidden;
 }
 
