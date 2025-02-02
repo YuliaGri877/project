@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.container{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
 html,
 body {
     font-family:'saira' 'Arial', sans-serif;
@@ -31,4 +37,13 @@ img {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.main__service-description {
+    font-family:'saira' 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: #1A3444;
+    background-color: #fefefe;
+    overflow-x: hidden;
 }

@@ -7,17 +7,21 @@
     <title>Информация для пациентов стоматологической клиники</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-</head>
 
 <body>
     <header class="header">
-        <img src="images/zub-logo.png" alt="Логотип" class="header__logo" width="80" height="80">
-        <nav class="nav">
-            <ul class="nav__links">
-                <li class="nav__item"><a href="index.html">Главная</a></li>
-                <li class="nav__item"><a href="service.html">Услуги</a></li>
-                <li class="nav__item"><a href="patient.html">Пациенту</a></li>
-                <li class="nav__item"><a href="record.html">Запись</a></li>
+        <img src="images/zub-logo.png" alt="Логотип" class="header__logo" width="50" height="50">
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a href="index.html"
+                        class="header__item-link header__item-link--active">Главная</a></li>
+                <li class="header__item"><a href="service.html"
+                        class="header__item-link header__item-link--active">Услуги</a></li>
+                <li class="header__item"><a href="patient.html"
+                        class="header__item-link header__item-link--active">Пациенту</a></li>
+                <li class="header__item"><a href="record.html"
+                        class="header__item-link header__item-link--active">Запись</a></li>
+                <button class="menu__consultation-button button">Заказать звонок</button>
             </ul>
         </nav>
     </header>

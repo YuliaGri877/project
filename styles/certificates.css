@@ -1,0 +1,30 @@
+.main__certificates {
+    background-color: #FFFFFF; /* Белый цвет фона для сертификатов */
+    padding: 20px;
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    justify-content: space-around; /* Выравнивание сертификатов по горизонтали */
+    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку при необходимости */
+}
+
+.main__certificates-image {
+    max-width: 100%; /* Максимальная ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 10px; /* Скругление углов изображений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для изображения */
+}
+
+.main__contact {
+    background-color: #E6F2FF; /* Цвет фона для контактов */
+    padding: 20px;
+    border-radius: 10px; /* Скругление углов для блока контактов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для блока контактов */
+}
+
+.main__contact a {
+    color: #007BFF; /* Цвет ссылок */
+    text-decoration: none; /* Без подчеркивания */
+}
+
+.main__contact a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
