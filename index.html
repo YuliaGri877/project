@@ -7,6 +7,7 @@
     <title>Сайт стоматологической клиники</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+</head>
 
 <body>
     <header class="header">
@@ -21,7 +22,7 @@
                         class="header__item-link header__item-link--active">Пациенту</a></li>
                 <li class="header__item"><a href="record.html"
                         class="header__item-link header__item-link--active">Запись</a></li>
-                <button class="menu__consultation-button button">Заказать звонок</button>
+                <li class="header__item"><button class="menu__consultation-button button">Заказать звонок</button></li>
             </ul>
         </nav>
     </header>
@@ -30,74 +31,76 @@
         <section class="section promo" id="promo">
             <div class="promo__content">
                 <h2 class="main__subtitle">-Стоматология в Москве</h2>
-                <p class="main__service-description">Лечение зубов в тот же день! <br>Мы проведем полную консультацию,
-                    профессиональную гигиену полости
-                    рта и лечение зубов и десен.</p>
+                <p class="main__service-description">Лечение зубов в тот же день! <br> Мы проведем полную консультацию,
+                    профессиональную гигиену полости рта и лечение зубов и десен.</p>
             </div>
-            <img class="promo__image" src="images/first_image.png" alt="Фото стоматологии" width="1766.29"
-                height="628.51">
+            <img class="promo__image" src="images/first_image.png" alt="Фото стоматологии" width="1766" height="628">
         </section>
 
-        <section class="main__services" id="card">
+        <section class="main__services" id="services">
             <h2 class="main__subtitle">Услуги</h2>
             <p class="main__service-description">Мы постарались сделать прайс, максимально простым и понятным.</p>
             <div class="services_list">
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_1.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_1.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Лечение зубов</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_3.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_3.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Профилактическая гигиена полости рта</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_2.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_2.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Ортодонтия (брекеты)</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_7.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_7.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Детская стоматология</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_5.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_5.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Имплантация зубов</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_8.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_8.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Изготовление и установка виниров</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_6.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_6.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Протезирование зубов</p>
                 </div>
                 <div class="services_card">
-                    <img class="main__services_image" src="images/services_4.jpg" alt="Услуги" />
+                    <img class="main__services_image" src="images/services_4.jpg" alt="Услуги" width="250" height="250">
                     <p class="main__services_name">Хирургические вмешательства</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <div class="specialists" id="card">
+            <div class="specialists">
                 <h2 class="main__subtitle">Специалисты</h2>
                 <div class="specialists_list">
                     <div class="specialists_card">
-                        <img class="main__specialists_image" src="images/doctor_2.jpg" alt="Специалисты" />
+                        <img class="main__specialists_image" src="images/doctor_3.jpg" alt="Специалисты" width="250"
+                            height="250">
                         <p class="main__specialist_name">Шевченко Павел Анатольевич</p>
                         <p>Главный врач, Врач ортодонт. Стаж: 11 лет.</p>
                     </div>
                     <div class="specialists_card">
-                        <img class="main__specialists_image" src="images/doctor_3.jpg" alt="Специалисты" />
+                        <img class="main__specialists_image" src="images/doctor_2.jpg" alt="Специалисты" width="250"
+                            height="250">
                         <p class="main__specialist_name">Степанова Марина Альбертовна</p>
                         <p>Врач стоматолог-терапевт. Стаж: более 25 лет.</p>
                     </div>
                     <div class="specialists_card">
-                        <img class="main__specialists_image" src="images/doctor_4.jpg" alt="Специалисты" />
-                        <p class="main__specialist_name">Степанова Марина Альбертовна</p>
-                        <p>Врач стоматолог-терапевт. Стаж: более 25 лет.</p>
+                        <img class="main__specialists_image" src="images/doctor_4.jpg" alt="Специалисты" width="250"
+                            height="250">
+                        <p class="main__specialist_name">Лобанова Мирослава Константиновна</p>
+                        <p>Врач хирург-стоматолог. Стаж: более 25 лет.</p>
                     </div>
                     <div class="specialists_card">
-                        <img class="main__specialists_image" src="images/doctor_5.jpg" alt="Специалисты" />
+                        <img class="main__specialists_image" src="images/doctor_5.jpg" alt="Специалисты" width="250"
+                            height="250">
                         <p class="main__specialist_name">Киренко Дмитрий Степанович</p>
                         <p>Врач стоматолог-ортопед, хирург-имплантолог. Стаж: более 10 лет.</p>
                     </div>
@@ -105,33 +108,32 @@
             </div>
         </section>
 
-        <main>
-            <h3 class="main__subtitle">Лицензии и сертификаты</h3>
-            <div class="main__certificates">
-                <img src="images/certificate1.jpg" alt="Сертификаты" class="main__certificates-image" width="250"
-                    height="300" />
-                <img src="images/certificate2.jpg" alt="Сертификаты" class="main__certificates-image" width="300"
-                    height="300" />
-            </div>
-            <h2 class="main__subtitle">Контакты</h2>
-            <div class="main__contact">
-                <p class="main__contact-address">Москва, Эшпая 1А</p>
-                <p class="main__contact-hours">С 09:00 - 20:00, пн-сб</p>
-                <p class="main__contact-phone">Телефон: <a href="tel:+79007878787">+7 900 787 87 87</a></p>
-            </div>
-            <h2 class="main__subtitle">Онлайн консультация</h2>
-            <div class="main__consultation">
-                <p class="main__consultation_description form__field">Укажите ваш номер телефона для обратного звонка:
-                </p>
-                <input type="text" class="main__consultation_input" placeholder="Введите номер телефона" />
-                <button class="main__consultation-button button">Заказать звонок</button>
-                <button class="main__appointment-button button">Записаться на приём</button>
-                <p class="main__consultation_note">Онлайн консультация специалиста по аудио и видео связи, Бесплатно.
-                </p> <!-- Новая фраза -->
-            </div>
-        </main>
-        <footer class="footer">
-            <p class="footer__text">© 2025 Dental Studio. Все права защищены.</p>
-            <p class="footer__address">Москва, Эшпая 1А</p>
-        </footer>
+        <h3 class="main__subtitle">Лицензии и сертификаты</h3>
+        <div class="main__certificates">
+            <img src="images/certificate1.jpg" alt="Сертификаты" class="main__certificates-image" width="250"
+                height="300">
+            <img src="images/certificate2.jpg" alt="Сертификаты" class="main__certificates-image" width="300"
+                height="300">
+        </div>
+        <h2 class="main__subtitle">Контакты</h2>
+        <div class="main__contact">
+            <p class="main__contact-address">Москва, Эшпая 1А</p>
+            <p class="main__contact-hours">С 09:00 - 20:00, пн-сб</p>
+            <p class="main__contact-phone">Телефон: <a href="tel:+79007878787">+7 900 787 87 87</a></p>
+        </div>
+        <h2 class="main__subtitle">Онлайн консультация</h2>
+        <div class="main__consultation">
+            <p class="main__consultation_description form__field">Укажите ваш номер телефона для обратного звонка:</p>
+            <input type="text" class="main__consultation_input" placeholder="Введите номер телефона">
+            <button class="main__consultation-button button">Заказать звонок</button>
+            <button class="main__appointment-button button">Записаться на приём</button>
+            <p class="main__consultation_note">Онлайн консультация специалиста по аудио и видео связи, Бесплатно.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">© 2025 Dental Studio. Все права защищены.</p>
+        <p class="footer__address">Москва, Эшпая 1А</p>
+    </footer>
+</body>
+
 </html>
