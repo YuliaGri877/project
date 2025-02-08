@@ -47,3 +47,29 @@ img {
     background-color: #fefefe;
     overflow-x: hidden;
 }
+
+max-width: 1024px {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__list {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .header__item {
+        margin: 5px 0;
+    }
+
+    .services_card, .specialists_card {
+        width: calc(50% - 10px);
+    }
+    
+    .promo__image {
+        height: auto;
+        max-width: 100%;
+    }
+}
