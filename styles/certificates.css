@@ -1,30 +1,33 @@
 .main__certificates {
-    background-color: #FFFFFF; /* Белый цвет фона для сертификатов */
+    background-color: #FFFFFF;
     padding: 20px;
-    display: flex; /* Используем flexbox для горизонтального расположения */
-    justify-content: space-around; /* Выравнивание сертификатов по горизонтали */
-    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку при необходимости */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+
 }
 
 .main__certificates-image {
-    max-width: 100%; /* Максимальная ширина изображения */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    border-radius: 10px; /* Скругление углов изображений */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для изображения */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main__contact {
-    background-color: #E6F2FF; /* Цвет фона для контактов */
+    background-color: #E6F2FF;
     padding: 20px;
-    border-radius: 10px; /* Скругление углов для блока контактов */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для блока контактов */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main__contact a {
-    color: #007BFF; /* Цвет ссылок */
-    text-decoration: none; /* Без подчеркивания */
+    color: #007BFF;
+    text-decoration: none;
 }
 
 .main__contact a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }

@@ -1,36 +1,28 @@
 .section.promo {
-    position: relative; /* Устанавливаем относительное позиционирование */
-    display: flex; /* Flexbox для расположения элементов в ряд */
-    align-items: center; /* Вертикальное центрирование */
+    position: relative; 
+    display: flex; 
+    align-items: center; 
 }
 
 .promo__content {
-    position: relative; /* Относительное позиционирование для дочерних элементов */
-    max-width: 50%; /* Ограничение ширины текста */
-    z-index: 2; /* Увеличение z-index, чтобы текст был выше изображения */
-    padding: 20px; /* Отступ вокруг текста */
+    position: relative; 
+    max-width: 50%; 
+    z-index: 2; 
+    padding: 20px;
 }
 
-.promo__title {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 88px;
-    color: #25292d;
-}
 
 .promo__description {
-    color: #333; /* Цвет описания */
-    font-size: 1.2em; /* Размер шрифта для описания */
+    color: #333; 
+    font-size: 1.2em; 
 }
 
 .promo__image {
-    width: 100%; /* Занимаем всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    position: absolute; /* Абсолютное позиционирование для взаимосвязи с родительским элементом */
+    width: 100%; 
+    height: auto; 
+    position: center; 
     top: 0;
-    left: 0; /* Устанавливаем изображение на фон */
-    z-index: 1; /* Уменьший z-index, чтобы изображение было ниже текста */
+    left: 0; 
+    z-index: 1; 
     border-bottom-left-radius: 200px;
 }
