@@ -7,7 +7,6 @@
     <title>Информация для пациентов стоматологической клиники</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-</head>
 
 <body>
     <header class="header">
@@ -16,52 +15,54 @@
             <ul class="header__list">
                 <li class="header__item"><a href="index.html"
                         class="header__item-link header__item-link--active">Главная</a></li>
-                <li class="header__item"><a href="service.html" class="header__item-link">Услуги</a></li>
+                <li class="header__item"><a href="service.html"
+                        class="header__item-link header__item-link--active">Услуги</a></li>
                 <li class="header__item"><a href="patient.html"
                         class="header__item-link header__item-link--active">Пациенту</a></li>
-                <li class="header__item"><a href="record.html" class="header__item-link">Запись</a></li>
-                <li class="header__item"><button class="menu__consultation-button button">Заказать звонок</button></li>
+                <li class="header__item"><a href="record.html"
+                        class="header__item-link header__item-link--active">Запись</a></li>
+                <button class="menu__consultation-button button">Заказать звонок</button>
             </ul>
         </nav>
     </header>
-    <main class="main"> 
-
+    <main class="container" id="main">
+    <main class="container">
         <div class="main__info">
-            <h1 class="visually-hidden">Информация для пациентов</h1> 
+            <h1 class="main__subtitle">Информация для пациентов</h1>
             <p class="main__service-description">Добро пожаловать в нашу стоматологическую клинику! Здесь вы найдете всю
                 необходимую информацию о наших услугах и процессе лечения.</p>
-            <img class="promo__image" src="images/main_image.avif" alt="Пациенту" width="800" height="500">
+            <img class="promo__image" src="images/main_image.avif" alt="Пациенту"  width="800" height="500" />
             <h2 class="main__subtitle">Подготовка к приему</h2>
             <p class="main__service-description">Перед посещением стоматолога, пожалуйста, учтите следующие
                 рекомендации:</p>
             <ul class="main__recommendations-list">
-                <li class="recommendations__item">При себе иметь документы, удостоверяющие личность.</li>
-                <li class="recommendations__item">Если вы принимаете медикаменты, сообщите об этом врачу.</li>
-                <li class="recommendations__item">Если у вас есть рентгеновские снимки, возьмите их с собой.</li>
+                <li class="main__recommendations-item">При себе иметь документы, удостоверяющие личность.</li>
+                <li class="main__recommendations-item">Если вы принимаете медикаменты, сообщите об этом врачу.</li>
+                <li class="main__recommendations-item">Если у вас есть рентгеновские снимки, возьмите их с собой.</li>
             </ul>
             <h2 class="main__subtitle">Часто задаваемые вопросы</h2>
-            <p class="main__service-description">Здесь представлены ответы на некоторые часто задаваемые вопросы
-                пациентов:</p>
+            <p class="main__service-description">Здесь представлены ответы на некоторые часто задаваемые вопросы пациентов:
+            </p>
             <ul class="main__faq-list">
-                <li class="faq__item"><strong>Как записаться на прием?</strong> Вы можете записаться через наш сайт или
-                    по телефону.</li> 
-                <li class="faq__item"><strong>Сколько длится консультация?</strong> Консультация обычно занимает около
-                    30 минут.</li>
-                <li class="faq__item"><strong>Какова политика отмены записи?</strong> Пожалуйста, отмените запись за 24
-                    часа до назначенного времени.</li>
+                <li class="main__recommendations-item"><strong>Как записаться на прием?</strong> Вы можете записаться через наш сайт
+                    или по телефону.</li>
+                <li class="main__recommendations-item"><strong>Сколько длится консультация?</strong> Консультация обычно занимает
+                    около 30 минут.</li>
+                <li class="main__recommendations-item"><strong>Какова политика отмены записи?</strong> Пожалуйста, отмените запись
+                    за 24 часа до назначенного времени.</li>
             </ul>
             <h2 class="main__subtitle">Контакты</h2>
-            <div class="contact-info">
-                <p class="contact__address">Москва, Эшпая 1А</p> 
-                <p class="contact__hours">С 09:00 - 20:00, пн-сб</p>
-                <p class="contact__phone">Телефон: <a href="tel:+79007878787">+7 900 787 87 87</a></p>
+            <div class="main__contact-info">
+                <p class="main__contact-address">Москва, Эшпая 1А</p>
+                <p class="main__contact-hours">С 09:00 - 20:00, пн-сб</p>
+                <p class="main__contact-phone">Телефон: <a href="tel:+79007878787">+7 900 787 87 87</a></p>
             </div>
             <h2 class="main__subtitle">Онлайн консультация</h2>
             <div class="main__consultation">
                 <p class="main__consultation-description">Укажите ваш номер телефона для обратного звонка:</p>
-                <input type="text" class="consultation__input" placeholder="Введите номер телефона">
-                <button class="consultation__button button">Заказать звонок</button>
-                <button class="appointment__button button">Записаться на приём</button>
+                <input type="text" class="main__consultation-input" placeholder="Введите номер телефона" />
+                <button class="main__consultation-button button">Заказать звонок</button>
+                <button class="main__appointment-button button">Записаться на приём</button>
             </div>
         </div>
     </main>
