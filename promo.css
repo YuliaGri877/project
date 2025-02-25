@@ -1,0 +1,28 @@
+.section.promo {
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+}
+
+.promo__content {
+    position: relative; 
+    max-width: 50%; 
+    z-index: 2; 
+    padding: 20px;
+}
+
+
+.promo__description {
+    color: #333; 
+    font-size: 1.2em; 
+}
+
+.promo__image {
+    width: 100%; 
+    height: auto; 
+    position: center; 
+    top: 0;
+    left: 0; 
+    z-index: 1; 
+    border-bottom-left-radius: 200px;
+}
