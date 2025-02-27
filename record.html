@@ -8,43 +8,50 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/footer.css">
+</head>
+
 <body>
     <header class="header">
-        <h1 class="header__title">Стоматологическая клиника</h1>   
+        <h1 class="header__title">Стоматологическая клиника</h1>
         <img src="images/zub-logo.png" alt="Логотип" class="header__logo" width="50" height="50">
         <nav class="header__nav">
             <ul class="header__list">
                 <li class="header__item"><a href="index.html"
                         class="header__item-link header__item-link--active">Главная</a></li>
-                <li class="header__item"><a href="service.html"
-                        class="header__item-link header__item-link--active">Услуги</a></li>
-                <li class="header__item"><a href="patient.html"
-                        class="header__item-link header__item-link--active">Пациенту</a></li>
-                <li class="header__item"><a href="record.html"
-                        class="header__item-link header__item-link--active">Запись</a></li>
-                <button class="menu__consultation-button button">Заказать звонок</button>
+                <li class="header__item"><a href="service.html" class="header__item-link">Услуги</a></li>
+                <li class="header__item"><a href="patient.html" class="header__item-link">Пациенту</a></li>
+                <li class="header__item"><a href="record.html" class="header__item-link">Запись</a></li>
+                <button class="header__consultation-button button">Заказать звонок</button>
             </ul>
         </nav>
     </header>
     <main class="container">
-        <div class="main__recording">
-            <h1 class="main__subtitle">Запись на прием</h1>
-            <p class="main__service-description">Чтобы записаться на прием к стоматологу, пожалуйста, заполните форму ниже.</p>
-            <img src="images/protezirovanie.jpg" alt="Запись на прием" class="main__image" width="800" height="500" />
-            <h2 class="main__subtitle">Форма записи</h2>
-            <form class="main__form" action="/" method="post">
-                <label for="full-name" class="main__form-label">ФИО:</label><br>
-                <input type="text" id="full-name" name="fullName" required class="main__form-input"
+        <!-- Секция Записи -->
+        <section class="recording">
+            <h1 class="recording__title">Запись на прием</h1>
+            <p class="recording__description">Чтобы записаться на прием к стоматологу, пожалуйста, заполните форму ниже.
+            </p>
+
+            <!-- Форма записи -->
+            <form class="recording__form" action="/" method="post">
+                <label for="full-name" class="recording__form-label">ФИО:</label><br>
+                <input type="text" id="full-name" name="fullName" required class="recording__form-input"
                     placeholder="Введите ваше ФИО"><br><br>
-                <label for="phone" class="main__form-label">Телефон:</label><br>
-                <input type="tel" id="phone" name="phone" required class="main__form-input"
+
+                <label for="phone" class="recording__form-label">Телефон:</label><br>
+                <input type="tel" id="phone" name="phone" required class="recording__form-input"
                     placeholder="Введите ваш телефон"><br><br>
-                <label for="preferred-date" class="main__form-label">Предпочтительная дата:</label><br>
-                <input type="date" id="preferred-date" name="preferredDate" required class="main__form-input"><br><br>
-                <label for="preferred-time" class="main__form-label">Предпочтительное время:</label><br>
-                <input type="time" id="preferred-time" name="preferredTime" required class="main__form-input"><br><br>
-                <label for="service" class="main__form-label">Выберите услугу:</label><br>
-                <select id="service" name="service" class="main__form-select">
+
+                <label for="preferred-date" class="recording__form-label">Предпочтительная дата:</label><br>
+                <input type="date" id="preferred-date" name="preferredDate" required
+                    class="recording__form-input"><br><br>
+
+                <label for="preferred-time" class="recording__form-label">Предпочтительное время:</label><br>
+                <input type="time" id="preferred-time" name="preferredTime" required
+                    class="recording__form-input"><br><br>
+
+                <label for="service" class="recording__form-label">Выберите услугу:</label><br>
+                <select id="service" name="service" class="recording__form-select">
                     <option value="лечение_зубов">Лечение зубов</option>
                     <option value="Хирургия">Хирургические вмешательства</option>
                     <option value="гигиена">Профилактическая гигиена</option>
@@ -54,15 +61,20 @@
                     <option value="Установка виниров">Установка виниров</option>
                     <option value="Протезирование">Протезирование</option>
                 </select><br><br>
-                <button type="submit button" class="main__form-button button">Записаться на прием</button>
+
+                <button type="submit" class="recording__form-button button">Записаться на прием</button>
             </form>
-            <h2 class="main__subtitle">Контакты</h2>
-            <div class="main__contact-info">
-                <p class="main__contact-address">Москва, Эшпая 1А</p>
-                <p class="main__contact-hours">С 09:00 - 20:00, пн-сб</p>
-                <p class="main__contact-phone">Телефон: <a href="tel:+79007878787">+7 900 787 87 87</a></p>
+
+           <!-- Секция Контактов -->
+           <section class="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__info">
+                <p class="contacts__address">Москва, Эшпая 1А</p>
+                <p class="contacts__hours">С 09:00 - 20:00, пн-сб</p>
+                <p class="contacts__phone">Телефон: <a href="tel:+79007878787" class="contacts__phone-link">+7 900 787
+                        87 87</a></p>
             </div>
-        </div>
+        </section>
     </main>
     <footer class="footer">
         <p class="footer__text">© 2025 Dental Studio. Все права защищены.</p>
