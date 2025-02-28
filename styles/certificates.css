@@ -1,33 +1,37 @@
-.main__certificates {
-    background-color: #FFFFFF;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-
+/* Стили для секции Лицензии и Сертификаты */
+.certificates {
+    margin-bottom: 40px;
+    text-align: center; 
 }
 
-.main__certificates-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Заголовок секции */
+.certificates__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.main__contact {
-    background-color: #E6F2FF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Контейнер с сертификатами */
+.certificates__list {
+    display: flex; 
+    justify-content: center; 
+    gap: 200px; 
+    flex-wrap: wrap; 
 }
 
-.main__contact a {
-    color: #007BFF;
-    text-decoration: none;
+/* Изображение сертификата */
+.certificates__image {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-.main__contact a:hover {
-    text-decoration: underline;
+/* Адаптация для маленьких экранов (до 1024px) */
+@media (max-width: 1024px) {
+    .certificates__list {
+        flex-direction: column; 
+        align-items: center; 
+    }
 }

@@ -1,0 +1,64 @@
+/* Стили для секции Подготовки к приему */
+.preparation {
+    margin-bottom: 40px;
+}
+
+/* Заголовок и описание секции */
+.preparation__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #000000;
+}
+
+.preparation__description {
+    font-size: 20px;
+    color: #474747;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Список рекомендаций */
+.preparation__list {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    padding-left: 0; 
+    list-style: none; 
+}
+
+/* Элементы списка (карточки) */
+.preparation__item {
+    background-color: #EFF0F4; 
+    border-radius: 12px; 
+    padding: 16px; 
+    max-width: 300px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center; 
+    line-height: 1.5;
+    font-size: 20px; 
+    color: #474747;
+}
+
+/* Ховер эффект для элементов списка */
+.preparation__item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 1024px) {
+    .preparation__list {
+        flex-direction: column; 
+        align-items: center; /
+    }
+
+    .preparation__item {
+        width: 100%;
+        max-width: none; 
+        margin-bottom: 20px; 
+    }
+}

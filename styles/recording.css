@@ -1,0 +1,83 @@
+/* Стили для секции Записи */
+.recording {
+    margin-bottom: 40px;
+}
+
+/* Заголовок и описание секции */
+.recording__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: center; 
+}
+
+.recording__description {
+    font-size: 20px;
+    color: #474747;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+
+/* Форма записи */
+.recording__form {
+    background-color: #E0FFFF; 
+    border-radius: 12px; 
+    padding: 24px; 
+    max-width: 500px; 
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; 
+}
+
+/* Лейблы формы */
+.recording__form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #474747;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left; 
+}
+
+/* Инпуты и селект формы */
+.recording__form-input,
+.recording__form-select {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 16px; 
+    border: 1px solid #ddd;
+    border-radius: 6px; 
+    font-size: 18px; 
+    box-sizing: border-box;
+}
+
+/* Кнопка формы */
+.recording__form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #38BCEA;
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    font-size: 18px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Ховер эффект для кнопки */
+.recording__form-button:hover {
+    background-color: #2a96b8; 
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 1024px) {
+    .recording__image {
+        width: 100%; 
+        height: auto;
+    }
+    .recording__form {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,28 @@
+/* Стили для секции Контактов */
+.contacts {
+    margin-bottom: 40px;
+    text-align: center; /* Центрирование содержимого */
+}
+
+.contacts__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contacts__info {
+    font-size: 16px;
+    color: #6F6F6F;
+    line-height: 1.5;
+}
+
+.contacts__phone-link {
+    color: #38BCEA; /* Цвет ссылки */
+    text-decoration: none; /* Без подчеркивания */
+    font-weight: 600;
+}
+
+.contacts__phone-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}

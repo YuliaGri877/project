@@ -1,49 +1,73 @@
-.card {
-    margin-top: 113px;
+/* Стили для секции Услуг */
+.services {
+    margin-bottom: 40px;
 }
 
-.card__list {
-    display: grid;
-    grid-template-columns: repeat(4, 278px);
-    gap: 29px;
-    padding-left: 0;
-    margin-top: 46px;
-
-    list-style: none;
-}
-
-.card__item {
-    padding: 24px 24px 34px;
-
-    border-radius: 24px;
-    background-color: #ffffff;
-    box-shadow: 0 16px 72px 0 rgba(34, 39, 47, 0.05);
-}
-
-.card__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 50px;
-    height: 50px;
-    margin-bottom: 24px;
-
-    border-radius: 12px;
-    background-color: rgba(255, 239, 204, 1);
-}
-
-.card__title {
-    margin-bottom: 16px;
-
+/* Заголовок и описание секции */
+.services__title {
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.25;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
-.card__description {
-    margin-top: 0;
-    margin-bottom: 0;
+.services__description {
+    font-size: 16px;
+    color: #6F6F6F;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-    line-height: 30px;
+/* Контейнер с карточками */
+.services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+/* Карточки услуг */
+.services__card {
+    width: calc(25% - 20px); 
+    background: #f8f9fa;
+    border-radius: 12px; 
+    padding: 20px; 
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Изображение в карточке */
+.services__card-image {
+    max-width: 80%; 
+    height: auto;
+    border-radius: 8px; 
+    margin-bottom: 10px;
+}
+
+/* Название услуги */
+.services__card-name {
+    font-size: 20px; 
+    color: #474747; 
+    font-weight: 600;
+    margin: 0;
+    transition: color 0.3s ease; 
+}    
+
+/* Ховер эффект для карточек */
+.services__card:hover {
+    background-color: #38BCEA; 
+    color: #FFFFFF; 
+}
+
+@media (max-width: 1024px) {
+    .services__card {
+        width: calc(33.33% - 20px); 
+    }
 }

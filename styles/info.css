@@ -1,0 +1,29 @@
+/* Стили для секции Информации */
+.info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.info__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.info__description {
+    font-size: 20px;
+    color: #474747;
+    margin-bottom: 22px;
+}
+.info__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 1024px) {
+    .info__image {
+        width: 100%;
+        height: auto;
+    }
+}

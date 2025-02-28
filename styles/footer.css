@@ -1,5 +1,11 @@
+/* Стили для подвала */
 .footer {
-    background-color: #F2F3F5;
-    display: block;
-    unicode-bidi: isolate;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 15px 0;
+}
+.footer__text,
+.footer__address {
+    font-size: 14px;
+    color: #474747;
 }

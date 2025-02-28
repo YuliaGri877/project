@@ -1,28 +1,73 @@
+/* Адаптивность для маленьких экранов */
+@media (max-width: 1024px) {
+    .promo__content {
+        position: static; 
+        max-width: 100%;
+        padding: 15px; 
+        background: none; 
+        box-shadow: none;
+    }
+
+    .promo__subtitle {
+        font-size: 24px;
+    }
+
+    .promo__description {
+        font-size: 16px; 
+        line-height: 1.5;
+    }
+
+    .promo__image {
+        border-radius: 0; 
+    }
+}
+
+/* Стили для секции Promo */
 .section.promo {
     position: relative; 
-    display: flex; 
+    display: flex;
     align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
 }
 
+/* Контейнер для текстового содержимого */
 .promo__content {
-    position: relative; 
-    max-width: 50%; 
+    position: absolute; 
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%); 
     z-index: 2; 
-    padding: 20px;
+    max-width: 400px;
+    padding: 20px; 
+    background: #FFFF;
+    border-radius: 10px; 
+    
 }
 
-
-.promo__description {
+/* Заголовок секции */
+.promo__subtitle {
     color: #333; 
-    font-size: 1.2em; 
+    font-size: 50px; 
+    font-weight: 700; 
+    text-align: left; 
+    margin: 0 0 10px; 
 }
 
+/* Описание секции */
+.promo__description {
+    color: #666; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    text-align: left; 
+    margin: 0;
+}
+
+/* Изображение в секции */
 .promo__image {
     width: 100%; 
-    height: auto; 
-    position: center; 
-    top: 0;
-    left: 0; 
+    height: auto;
+    position: relative; 
     z-index: 1; 
-    border-bottom-left-radius: 200px;
+    border-bottom-left-radius: 200px; 
 }

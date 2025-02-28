@@ -1,39 +1,101 @@
+/* Стили для шапки */
 .header {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    justify-content: space-between; 
+    align-items: center; 
+    background: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
+/* Логотип */
+.header__logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Навигация */
+.header__nav {
+    display: flex;
+    align-items: center; 
+}
+
+/* Список навигации */
 .header__list {
     display: flex;
-    align-items: center;
-    gap: 180px;
-    padding-left: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+/* Элементы списка */
+.header__item {
+    margin-right: 20px; /* Отступ между элементами */
+}
+
+/* Последний элемент без отступа */
+.header__item:last-child {
+    margin-right: 0;
+}
+
+/* Ссылки в навигации */
 .header__item-link {
+    color: #343a40;
+    text-decoration: none;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #AAAAAA; 
-    text-decoration: none; 
+    font-weight: 500;
+    transition: color 0.3s ease; 
 }
 
+/* Активная ссылка */
 .header__item-link--active {
-    font-weight: 600;
-    color: #01678A; 
-    text-decoration: none; 
+    font-weight: bold;
+    color: #38BCEA; 
 }
 
-.header__logo {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    padding: 11px;
+/* Кнопка "Заказать звонок" */
+.header__consultation-button {
+    background-color: #38BCEA; 
+    color: #ffffff;
+    border: none; 
+    border-radius: 5px; 
+    padding: 8px 16px;
+    font-size: 18px; 
+    font-weight: 500;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 20px; 
+}
+
+/* Ховер эффект для кнопки */
+.header__consultation-button:hover {
+    background-color: #38BCEA; /* Темнее при наведении */
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .header__logo {
+        margin-bottom: 10px; 
+    }
+
+    .header__list {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .header__item {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .header__consultation-button {
+        width: 100%; 
+        margin-left: 0; 
+        margin-top: 10px; 
+    }
 }

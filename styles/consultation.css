@@ -1,34 +1,28 @@
-.main__consultation {
-    background-color: #F2F3F5; 
-    padding: 20px;
+/* Стили для секции Онлайн консультации */
+.consultation {
+    margin-bottom: 40px;
+    text-align: center;
 }
-
-.main__consultation_input {
-    width: calc(100% - 20px); 
+.consultation__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.consultation__input {
+    width: 100%;
+    max-width: 400px;
     padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc; 
+    margin-bottom: 10px;
 }
-
-.main__consultation-button,
-.main__appointment-button {
-    margin-top: 10px;
-    background-color: #38BCEA;
-    color: #fff;
+.button {
+    background: #85befb;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
-
-.main__consultation-button:hover,
-.main__appointment-button:hover {
-    background-color: #007BFF; 
-}
-
-.main__consultation_note {
-    margin-top: 15px; 
-    font-weight: bold; 
+.button:hover {
+    background: #95c3f4;
 }

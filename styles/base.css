@@ -4,22 +4,6 @@
     box-sizing: border-box;
 }
 
-.container{
-    width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-   }
-
-html,
-body {
-    font-family:'saira' 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 30px;
-    color: #1A3444;
-    background-color: #fefefe;
-    overflow-x: hidden;
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -41,9 +25,21 @@ img {
 
 .main__service-description {
     font-family:'saira' 'Arial', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
     color: #1A3444;
     background-color: #fefefe;
     overflow-x: hidden;
+}
+
+body {
+    font-family: 'saira';
+    line-height: 1.6;
+}
+
+/* Общие стили для контейнера */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }

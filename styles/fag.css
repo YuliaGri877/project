@@ -1,0 +1,83 @@
+/* Стили для секции Часто задаваемых вопросов */
+.faq {
+    margin-bottom: 40px;
+}
+.faq__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.faq__description {
+    font-size: 20px;
+    color: #474747;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Квадраты для вопросов */
+.faq__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.faq__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #eff0f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.faq__item strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #38BCEA;
+    margin-bottom: 10px;
+}
+.faq__item span {
+    font-size: 15px;
+    color: #333;
+}
+
+/* Цифры для вопросов */
+.faq__item::before {
+    content: counter(faq-counter);
+    counter-increment: faq-counter;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: #38BCEA;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Выделение вопроса и ответа разными цветами */
+.faq__item:nth-child(odd) strong {
+    color: #38BCEA; 
+}
+.faq__item:nth-child(odd) span {
+    color: #38BCEA; 
+}
+.faq__item:nth-child(even) strong {
+    color: #38BCEA; 
+}
+.faq__item:nth-child(even) span {
+    color: #38BCEA; 
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 1024px) {
+    .faq__item {
+        width: 100%;
+    }
+}
