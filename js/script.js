@@ -1,53 +1,79 @@
-'use strict'
+// Файл: scripts/consultation.js
+'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-
     /* 
-    * 2. Плавная прокрутка к секциям при клике на меню
-    */
-
-    // 1. Получаем все ссылки в меню
-    const menuLinks = document.querySelectorAll('.header__item-link');
-    if (!menuLinks.length) {
-        console.error('Ссылки в меню не найдены!');
-        return;
-    }
-    
-    /* 
-    *   Алгоритм
-    *   1. Начало.
-    *   2. Найти все ссылки меню.
-    *   3. Для каждой ссылки:
-    *       3.1. Навесить обработчик события клик.
-    *       3.2. При клике:
-    *           3.2.1. Предотвратить стандартный переход по ссылке.
-    *           3.2.2. Получить целевую секцию по href (например, #services).
-    *           3.2.3. Проверить, существует ли секция.
-    *               3.2.3.1. Да: выполнить плавную прокрутку.
-    *               3.2.3.2. Нет: вывести ошибку.
-    *   4. Конец.
+    * Форма онлайн-консультации
     * 
-    *   Блок-схема: https://prnt.sc/123456 (пример ссылки)
+    * Алгоритм:
+    * 1. Получить элементы формы.
+    * 2. Навесить обработчик на кнопку "Заказать звонок".
+    * 3. При клике:
+    *    3.1. Проверить валидность телефона.
+    *    3.2. Если валидно — отправить данные и показать сообщение.
+    *    3.3. Иначе — показать ошибку.
+    * 4. Очистить форму после отправки.
     */
+    
+    const phoneInput = document.getElementById('phone');
+    const submitButton = document.querySelector('.consultation__button');
+    const feedback = document.querySelector('.feedback-message');
 
-    // 4. Навешиваем обработчик на каждую ссылку
-    menuLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); // 3.2.1. Предотвращаем переход по ссылке
-            const targetId = e.target.getAttribute('href'); // Получаем ID секции
-            const targetSection = document.querySelector(targetId); // 3.2.2. Находим секцию
-            
-            // 3.2.3. Проверяем существование секции
-            if (targetSection) {
-                // 3.2.3.1. Выполняем плавную прокрутку
-                targetSection.scrollIntoView({
-                    behavior: 'smooth', // Плавная анимация
-                    block: 'start' // Прокручиваем к верхней части секции
-                });
-                console.log(`Прокрутка к секции ${targetId}`);
-            } else {
-                console.error(`Секция ${targetId} не найдена!`);
-            }
+    // Проверка валидности телефона
+    function validatePhone(phone) {
+        const phonePattern = /^(\+7|8)\s?\(?[0-9]{3}\)?\s?-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$/;
+        return phonePattern.test(phone);
+    }
+
+    // Отправка данных (мок-функция)
+    function sendConsultation(phone) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (phone) {
+                    resolve({ success: true });
+                } else {
+                    reject('Ошибка: Пустой телефон!');
+                }
+            }, 1000);
         });
+    }
+
+    // Обработчик клика по кнопке
+    submitButton.addEventListener('click', async () => {
+        const phone = phoneInput.value.trim();
+
+        // Проверка обязательного поля
+        if (!phone) {
+            feedback.textContent = 'Пожалуйста, введите телефон!';
+            feedback.style.color = 'red';
+            feedback.style.display = 'block';
+            return;
+        }
+
+        // Валидация телефона
+        if (!validatePhone(phone)) {
+            feedback.textContent = 'Некорректный формат телефона!';
+            feedback.style.color = 'red';
+            feedback.style.display = 'block';
+            return;
+        }
+
+        // Отправка данных
+        try {
+            const response = await sendConsultation(phone);
+            if (response.success) {
+                feedback.textContent = 'Заявка отправлена! Скоро с вами свяжутся.';
+                feedback.style.color = 'green';
+                phoneInput.value = ''; // Очистка формы
+            }
+        } catch (error) {
+            feedback.textContent = error.message;
+            feedback.style.color = 'red';
+        }
+
+        // Скрыть сообщение через 3 секунды
+        setTimeout(() => {
+            feedback.style.display = 'none';
+        }, 3000);
     });
 });

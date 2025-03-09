@@ -66,13 +66,13 @@
             </form>
 
            <!-- Секция Контактов -->
-           <section class="contacts">
-            <h2 class="contacts__title">Контакты</h2>
-            <div class="contacts__info">
-                <p class="contacts__address">Москва, Эшпая 1А</p>
-                <p class="contacts__hours">С 09:00 - 20:00, пн-сб</p>
-                <p class="contacts__phone">Телефон: <a href="tel:+79007878787" class="contacts__phone-link">+7 900 787
-                        87 87</a></p>
+           <section class="consultation" id="consultation">
+            <h2 class="consultation__title">Онлайн консультация</h2>
+            <div class="consultation__form">
+                <p class="consultation__description">Укажите ваш номер телефона для обратного звонка:</p>
+                <input type="tel" id="phone" class="consultation__input" placeholder="Телефон" required>
+                <button type="button" class="consultation__button button">Записаться на прием</button>
+                <div class="feedback-message" style="display: none; margin-top: 10px;"></div>
             </div>
         </section>
     </main>

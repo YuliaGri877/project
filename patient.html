@@ -71,13 +71,13 @@
         </section>
 
         <!-- Секция Онлайн консультации -->
-        <section class="consultation">
+        <section class="consultation" id="consultation">
             <h2 class="consultation__title">Онлайн консультация</h2>
             <div class="consultation__form">
                 <p class="consultation__description">Укажите ваш номер телефона для обратного звонка:</p>
-                <input type="text" class="consultation__input" placeholder="Введите номер телефона" />
-                <button class="consultation__button button">Заказать звонок</button>
-                <button class="consultation__appointment-button button">Записаться на приём</button>
+                <input type="tel" id="phone" class="consultation__input" placeholder="Телефон" required>
+                <button type="button" class="consultation__button button">Записаться на прием</button>
+                <div class="feedback-message" style="display: none; margin-top: 10px;"></div>
             </div>
         </section>
     </main>
