@@ -1,87 +1,55 @@
-/* Общие стили для секции Услуг */
-.main__services {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px; 
-}
-
-/* Описание секции */
-.main__service-description {
-    margin-bottom: 40px; 
-    text-align: center;
-    max-width: 800px; 
-    margin: 0 auto;
-    font-size: 18px; 
-    font-weight: 400;
-    line-height: 1.6;
-    color: #737373;
-}
-
-/* Контейнер с карточками */
-.services_list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 50px; 
-    justify-content: center; 
+/* Контейнер для карточек */
+.services__list {
+    display: flex;
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    scroll-snap-type: x mandatory; /* Фиксация карточек при прокрутке */
+    gap: 20px; /* Отступ между карточками */
+    padding-bottom: 20px; /* Для видимости кнопок */
 }
 
 /* Карточки услуг */
-.services_card {
-    background-color: #FBFBFB;
-    border: 1px solid #E0E0E0; 
-    border-radius: 12px; 
-    padding: 20px; 
+.services__card {
+    flex: 0 0 calc(33.33% - 20px); /* 3 карточки в ряд */
+    max-width: 300px; /* Максимальная ширина карточки */
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
-    box-shadow: none; 
-    transition: background-color 0.3s, color 0.3s;
-    color: #454545;
+    scroll-snap-align: start; /* Фиксация каждой карточки */
+    transition: transform 0.3s ease;
 }
 
-/* Ховер эффект для карточек */
-.services_card:hover {
-    background-color: #F0F8FF; 
-    color: #12354B; 
-    transform: none; 
+/* Скрываем стандартную полосу прокрутки */
+.services__list::-webkit-scrollbar {
+    display: none;
 }
 
-/* Изображение в карточке */
-.main__services_image {
-    border-radius: 12px; 
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px; 
+.services__list {
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
-/* Название услуги */
-.main__services_name {
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 10px;
-    color: inherit; 
+/* Кнопки навигации */
+.services__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-/* Заголовок секции */
-.main__subtitle {
-    max-width: 1200px;
-    margin: 0 auto 40px; 
-    font-size: 36px; 
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center; 
-    color: #12354B;
+.services__prev-button,
+.services__next-button {
+    background-color: #38BCEA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Адаптивность для маленьких экранов */
-@media (max-width: 1024px) {
-    .main__services {
-        padding: 20px; 
-    }
-
-    .services_list {
-        gap: 30px; 
-    }
-
-    .services_card {
-        padding: 15px; 
-    }
+.services__prev-button:hover,
+.services__next-button:hover {
+    background-color: #2a96b8;
 }

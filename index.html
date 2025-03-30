@@ -7,7 +7,10 @@
     <title>Сайт стоматологической клиники</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/recording-popup.css">
+    <link rel="stylesheet" href="service.css">
 </head>
+<script src="js/script.js"></script>
 
 <body>
     <header class="header">
@@ -37,41 +40,76 @@
         </section>
 
         <!-- Секция Services -->
+
         <section class="services" id="services">
             <h2 class="services__title">Услуги</h2>
             <p class="services__description">Мы постарались сделать прайс максимально простым и понятным.</p>
+
+            <!-- Кнопки навигации -->
+            <div class="services__controls">
+                <button class="services__prev-button button">← Влево</button>
+                <button class="services__next-button button">Вправо →</button>
+            </div>
+
+            <!-- Карточки услуг -->
             <div class="services__list">
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_1.jpg" alt="Услуги" />
                     <p class="services__card-name">Лечение зубов</p>
+                    <div class="services__text" hidden>
+                        Мы предлагаем комплексное лечение кариеса, пульпита и периодонтита с использованием современных
+                        материалов и технологий.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_3.jpg" alt="Услуги" />
                     <p class="services__card-name">Профилактическая гигиена полости рта</p>
+                    <div class="services__text" hidden>
+                        Регулярная профессиональная чистка зубов, удаление зубного камня и налета.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_2.jpg" alt="Услуги" />
                     <p class="services__card-name">Ортодонтия (брекеты)</p>
+                    <div class="services__text" hidden>
+                        Выравнивание зубов и коррекция прикуса с помощью брекет-систем различных типов.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_7.jpg" alt="Услуги" />
                     <p class="services__card-name">Детская стоматология</p>
+                    <div class="services__text" hidden>
+                        Безболезненное и комфортное лечение для детей всех возрастов.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_5.jpg" alt="Услуги" />
                     <p class="services__card-name">Имплантация зубов</p>
+                    <div class="services__text" hidden>
+                        Восстановление утраченных зубов с помощью современных имплантатов.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_8.jpg" alt="Услуги" />
                     <p class="services__card-name">Изготовление и установка виниров</p>
+                    <div class="services__text" hidden>
+                        Тонкие керамические накладки для коррекции формы, цвета и положения зубов.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_6.jpg" alt="Услуги" />
                     <p class="services__card-name">Протезирование зубов</p>
+                    <div class="services__text" hidden>
+                        Восстановление утраченных или поврежденных зубов с помощью съемных и несъемных протезов.
+                    </div>
                 </div>
                 <div class="services__card">
                     <img class="services__card-image" src="images/services_4.jpg" alt="Услуги" />
                     <p class="services__card-name">Хирургические вмешательства</p>
+                    <div class="services__text" hidden>
+                        Современные методы удаления зубов, операции по восстановлению десен и другие хирургические
+                        процедуры.
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,6 +175,45 @@
             </div>
         </section>
     </main>
+
+    <!-- Всплывающая форма записи -->
+    <div class="recording-popup" id="recording-popup" style="display: none;">
+        <div class="recording-popup__content">
+            <span class="recording-popup__close" id="close-recording-form">&times;</span>
+            <h1 class="recording-popup__title">Запись на прием</h1>
+            <p class="recording-popup__description">Чтобы записаться на прием к стоматологу, пожалуйста, заполните форму
+                ниже.
+            </p>
+            <!-- Форма записи -->
+            <form class="recording-popup__form" action="/" method="post">
+                <label for="full-name" class="recording-popup__form-label">ФИО:</label><br>
+                <input type="text" id="full-name" name="fullName" required class="recording-popup__form-input"
+                    placeholder="Введите ваше ФИО"><br><br>
+                <label for="phone" class="recording-popup__form-label">Телефон:</label><br>
+                <input type="tel" id="phone" name="phone" required class="recording-popup__form-input"
+                    placeholder="Введите ваш телефон"><br><br>
+                <label for="preferred-date" class="recording-popup__form-label">Предпочтительная дата:</label><br>
+                <input type="date" id="preferred-date" name="preferredDate" required
+                    class="recording-popup__form-input"><br><br>
+                <label for="preferred-time" class="recording-popup__form-label">Предпочтительное время:</label><br>
+                <input type="time" id="preferred-time" name="preferredTime" required
+                    class="recording-popup__form-input"><br><br>
+                <label for="service" class="recording-popup__form-label">Выберите услугу:</label><br>
+                <select id="service" name="service" class="recording-popup__form-select">
+                    <option value="лечение_зубов">Лечение зубов</option>
+                    <option value="Хирургия">Хирургические вмешательства</option>
+                    <option value="гигиена">Профилактическая гигиена</option>
+                    <option value="ортодонтия">Ортодонтия</option>
+                    <option value="Детская стоматология">Детская стоматология</option>
+                    <option value="Имплантация">Имплантация</option>
+                    <option value="Установка виниров">Установка виниров</option>
+                    <option value="Протезирование">Протезирование</option>
+                </select><br><br>
+                <button type="submit" class="recording-popup__form-button button">Записаться на прием</button>
+            </form>
+        </div>
+    </div>
+
     <footer class="footer">
         <p class="footer__text">© 2025 Dental Studio. Все права защищены.</p>
         <p class="footer__address">Москва, Эшпая 1А</p>
