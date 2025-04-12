@@ -1,0 +1,74 @@
+[
+    {
+        "link": "/treatment/",
+        "icon": "images/services_1.jpg",
+        "iconAlt": "Иконка лечения зубов",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Лечение зубов",
+        "description": "Качественное лечение кариеса, пульпита и периодонтита с использованием современных технологий."
+    },
+    {
+        "link": "/hygiene/",
+        "icon": "images/services_3.jpg",
+        "iconAlt": "Иконка гигиены полости рта",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Гигиена полости рта",
+        "description": "Профессиональная чистка зубов, удаление зубного камня и налета для поддержания здоровья."
+    },
+    {
+        "link": "/orthodontics/",
+        "icon": "images/services_2.jpg",
+        "iconAlt": "Иконка ортодонтии",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Ортодонтия",
+        "description": "Выравнивание зубов и коррекция прикуса с помощью современных брекет-систем."
+    },
+    {
+        "link": "/implants/",
+        "icon": "images/services_5.jpg",
+        "iconAlt": "Иконка имплантации",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Имплантация зубов",
+        "description": "Восстановление утраченных зубов с помощью надежных имплантатов."
+    },
+    {
+        "link": "/children/",
+        "icon": "images/services_7.jpg",
+        "iconAlt": "Иконка детской стоматологии",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Детская стоматология",
+        "description": "Безболезненное лечение для детей всех возрастов в комфортной обстановке."
+    },
+    {
+        "link": "/surgery/",
+        "icon": "images/services_4.jpg",
+        "iconAlt": "Иконка хирургии",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Хирургия",
+        "description": "Современные методы удаления зубов и другие хирургические процедуры."
+    },
+    {
+        "link": "/veneers/",
+        "icon": "images/services_8.jpg",
+        "iconAlt": "Иконка виниры",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Виниры",
+        "description": "Тонкие керамические накладки для коррекции формы, цвета и положения зубов."
+    },
+    {
+        "link": "/prosthetics/",
+        "icon": "images/services_6.jpg",
+        "iconAlt": "Иконка протезирование",
+        "iconWidth": 24,
+        "iconHeight": 24,
+        "title": "Протезирование",
+        "description": "Восстановление утраченных или поврежденных зубов с помощью съемных и несъемных протезов."
+    }
+]

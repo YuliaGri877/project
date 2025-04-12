@@ -1,0 +1,30 @@
+/* Подключение шрифтов */
+@import "fonts.css";
+/* Подключение анимаций */
+@import "animation.css";
+/* Подключение предзагрузчика страницы */
+@import "preloader.css";
+/* Подключение основных стилей */
+@import "base.css";
+/* Подключение стилей относящихся к header */
+@import "header.css";
+/* Подключение стилей относящихся к footer */
+@import "footer.css";
+/* Подключение стилей относящихся к main */
+@import "main.css";
+/* Подключение универсальных стилей */
+@import "typography.css";
+@import "main.css";
+@import "services.css";
+@import "specialists.css";
+@import "certificates.css";
+@import "card.css";
+@import "consultation.css";
+@import "animation.css";
+@import "media.css";
+@import "info.css";
+@import "preparation.css";
+@import "fag.css";
+@import "contacts.css";
+@import "recording.css";
+@import "promo.css";
