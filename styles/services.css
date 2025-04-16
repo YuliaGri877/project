@@ -1,40 +1,115 @@
-/* Стили для карточек услуг */
-.services__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+/* Стили для секции Услуг с фиксированным отображением по 3 карточки в ряд */
+.services {
+    margin-bottom: 40px;
 }
 
-.services__card {
-    width: 300px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Заголовок и описание секции */
+.services__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
-.services__card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.services__card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.services__card-name {
-    padding: 15px;
-    font-weight: bold;
+.services__description {
+    font-size: 16px;
+    color: #6F6F6F;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.services__text {
-    padding: 0 15px 15px;
-    color: #555;
+/* Настройки для свайпера - фиксированная ширина */
+.servicesSwiper {
+    width: 100%;
+    padding: 20px 0 50px;
+    overflow: hidden;
+}
+
+/* Обеспечиваем фиксированное отображение по 3 карточки */
+.swiper-slide {
+    width: calc(33.333% - 14px) !important; /* Фиксированная ширина для 3 карточек */
+}
+
+/* Карточки услуг внутри свайпера */
+.swiper-slide .services__card {
+    width: 100%;
+    height: 100%;
+    min-height: 250px; /* Минимальная высота карточки */
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Изображение в карточке */
+.services__card-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Название услуги */
+.services__card-name {
+    font-size: 20px;
+    color: #474747;
+    font-weight: 600;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Ховер эффект для карточек */
+.services__card:hover {
+    background-color: #38BCEA;
+    color: #FFFFFF;
+}
+
+.services__card:hover .services__card-name {
+    color: #FFFFFF;
+}
+
+/* Стили для навигации свайпера */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #38BCEA;
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #38BCEA;
+}
+
+/* Адаптивность для экранов меньше 768px */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: calc(50% - 10px) !important; /* 2 карточки на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        width: 100% !important; /* 1 карточка на мобильных */
+    }
 }

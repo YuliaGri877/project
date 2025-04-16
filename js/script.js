@@ -49,17 +49,58 @@ document.addEventListener('DOMContentLoaded', function () {
                 `).join('');
             }
 
+            // Инициализация Swiper с правильной горизонтальной прокруткой
+            // Инициализация Swiper с исправленными настройками для малого количества слайдов
+            const slides = document.querySelectorAll('.swiper-slide');
+            const enableLoop = slides.length > 3; // Включаем loop только если слайдов больше 3
+            // Инициализация Swiper для карточек услуг
+            const swiper = new Swiper('.servicesSwiper', {
+                slidesPerView: 4, // По 4 карточки в ряд на широких экранах, как у специалистов
+                spaceBetween: 20, // Такой же отступ как у карточек специалистов
+                loop: true,
+                loopedSlides: services.length,
+                speed: 500,
+                autoplay: {
+                    delay: 5000, // Автоматическая прокрутка каждые 5 секунд
+                    disableOnInteraction: false, // Не останавливать при взаимодействии
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    // Те же брейкпоинты, как в медиа-запросах для специалистов
+                    320: {
+                        slidesPerView: 1, // 1 колонка на мобильных
+                    },
+                    480: {
+                        slidesPerView: 1, // 1 колонка на маленьких экранах
+                    },
+                    768: {
+                        slidesPerView: 2, // 2 колонки на планшетах
+                    },
+                    1024: {
+                        slidesPerView: 3, // 3 колонки на небольших десктопах
+                    },
+                    1200: {
+                        slidesPerView: 4, // 4 колонки на широких экранах
+                    }
+                }
+            });
+
             // 2.2. Карточки в секции services
             const servicesList = document.querySelector('.services__list');
             if (servicesList) {
                 servicesList.innerHTML = services.map(service => `
                     <div class="swiper-slide">
                         <div class="services__card">
-                            <div class="services__image-container">
-                                <img class="services__card-image" 
-                                     src="${service.icon.replace('icon/', '')}" 
-                                     alt="${service.title}">
-                            </div>
+                            <img class="services__card-image" 
+                                 src="${service.icon.replace('icon/', '')}" 
+                                 alt="${service.title}">
                             <p class="services__card-name">${service.title}</p>
                             <div class="services__text" hidden>
                                 ${service.description}
@@ -68,31 +109,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `).join('');
 
-                // Инициализация Swiper
-                const swiper = new Swiper('.servicesSwiper', {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                        }
-                    }
-                });
-
+                servicesList.innerHTML = services.map(service => `
+                    <div class="swiper-slide">
+                        <div class="services__card">
+                            <div class="services__image-container">
+                                <img class="services__card-image" 
+                                     src="${service.icon.replace('icon/', '')}" 
+                                     alt="${service.title}">
+                            </div>
+                            <div class="services__content">
+                                <p class="services__card-name">${service.title}</p>
+                                <div class="services__text" hidden>
+                                    ${service.description}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
                 // Обработчики для раскрытия текста
                 servicesList.querySelectorAll('.services__card').forEach(card => {
                     card.addEventListener('click', function () {
@@ -101,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 });
             }
-
             return services;
         } catch (error) {
             console.error('Ошибка загрузки данных:', error);
