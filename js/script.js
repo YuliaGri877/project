@@ -22,13 +22,13 @@ if (preloader) {
     setTimeout(hidePreloader, 3000); // Фолбэк на случай, если load не сработает
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // 2. Загрузка данных и создание карточек
     const loadAndRenderCards = async () => {
         try {
             const response = await fetch('data.json');
             if (!response.ok) throw new Error(`Ошибка HTTP: ${response.status}`);
-            
+
             const services = await response.json();
             console.log('Успешно загружено услуг:', services.length);
 
@@ -53,22 +53,49 @@ document.addEventListener('DOMContentLoaded', function() {
             const servicesList = document.querySelector('.services__list');
             if (servicesList) {
                 servicesList.innerHTML = services.map(service => `
-                    <div class="services__card">
-                        <div class="services__image-container">
-                            <img class="services__card-image" 
-                                 src="${service.icon.replace('icon/', '')}" 
-                                 alt="${service.title}">
-                        </div>
-                        <p class="services__card-name">${service.title}</p>
-                        <div class="services__text" hidden>
-                            ${service.description}
+                    <div class="swiper-slide">
+                        <div class="services__card">
+                            <div class="services__image-container">
+                                <img class="services__card-image" 
+                                     src="${service.icon.replace('icon/', '')}" 
+                                     alt="${service.title}">
+                            </div>
+                            <p class="services__card-name">${service.title}</p>
+                            <div class="services__text" hidden>
+                                ${service.description}
+                            </div>
                         </div>
                     </div>
                 `).join('');
 
+                // Инициализация Swiper
+                const swiper = new Swiper('.servicesSwiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        }
+                    }
+                });
+
                 // Обработчики для раскрытия текста
                 servicesList.querySelectorAll('.services__card').forEach(card => {
-                    card.addEventListener('click', function() {
+                    card.addEventListener('click', function () {
                         const text = this.querySelector('.services__text');
                         if (text) text.hidden = !text.hidden;
                     });
@@ -81,12 +108,11 @@ document.addEventListener('DOMContentLoaded', function() {
             return [];
         }
     };
-
     // 3. Слайдер для карточек услуг
     const initSlider = () => {
         const controlsContainer = document.querySelector('.services__controls');
         const cards = document.querySelectorAll('.services__card');
-        
+
         if (!controlsContainer || cards.length === 0) return;
 
         let currentIndex = 0;
@@ -102,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const updateSlider = () => {
             cards.forEach((card, index) => {
-                card.style.display = 
-                    (index >= currentIndex && index < currentIndex + visibleCards) 
-                    ? 'block' : 'none';
+                card.style.display =
+                    (index >= currentIndex && index < currentIndex + visibleCards)
+                        ? 'block' : 'none';
             });
 
             prevBtn.disabled = currentIndex === 0;
@@ -129,9 +155,69 @@ document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById('recording-popup');
         if (!modal) return;
 
+        const form = modal.querySelector('.recording-popup__form');
+
+        // Load saved form data if exists
+        const loadFormData = () => {
+            const savedData = localStorage.getItem('appointmentFormData');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                if (form) {
+                    form.elements.fullName.value = data.fullName || '';
+                    form.elements.phone.value = data.phone || '';
+                    form.elements.preferredDate.value = data.preferredDate || '';
+                    form.elements.preferredTime.value = data.preferredTime || '';
+                    form.elements.service.value = data.service || 'лечение_зубов';
+                }
+            }
+        };
+
+        // Save form data when inputs change
+        const saveFormData = () => {
+            if (form) {
+                const formData = {
+                    fullName: form.elements.fullName.value,
+                    phone: form.elements.phone.value,
+                    preferredDate: form.elements.preferredDate.value,
+                    preferredTime: form.elements.preferredTime.value,
+                    service: form.elements.service.value
+                };
+                localStorage.setItem('appointmentFormData', JSON.stringify(formData));
+            }
+        };
+
+        // Add event listeners for form inputs
+        if (form) {
+            form.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('change', saveFormData);
+                input.addEventListener('keyup', saveFormData);
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Here you would normally send the form data
+                console.log('Form submitted:', {
+                    fullName: this.elements.fullName.value,
+                    phone: this.elements.phone.value,
+                    preferredDate: this.elements.preferredDate.value,
+                    preferredTime: this.elements.preferredTime.value,
+                    service: this.elements.service.value
+                });
+
+                // Clear saved data after submission
+                localStorage.removeItem('appointmentFormData');
+                this.reset();
+
+                // Show success message
+                alert('Ваша запись успешно сохранена! Мы свяжемся с вами для подтверждения.');
+                closeModal();
+            });
+        }
+
         const openModal = () => {
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            loadFormData();
         };
 
         const closeModal = () => {
@@ -139,15 +225,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         };
 
-        // Все кнопки с атрибутом data-modal-open
         document.querySelectorAll('[data-modal-open]').forEach(btn => {
             btn.addEventListener('click', openModal);
         });
 
-        // Кнопка закрытия
         document.getElementById('close-recording-form')?.addEventListener('click', closeModal);
 
-        // Закрытие по клику вне окна
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeModal();
         });
@@ -175,7 +258,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('.consultation__form');
         if (!form) return;
 
-        form.addEventListener('submit', function(e) {
+        // Load saved phone if exists
+        const savedPhone = localStorage.getItem('consultationPhone');
+        if (savedPhone) {
+            const phoneInput = form.querySelector('#phone');
+            if (phoneInput) phoneInput.value = savedPhone;
+        }
+
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
             const phoneInput = this.querySelector('#phone');
             const feedback = this.querySelector('.feedback-message');
@@ -187,8 +277,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Здесь должна быть отправка данных
-            console.log('Отправка номера:', phoneInput.value);
+            // Save to localStorage
+            localStorage.setItem('consultationPhone', phoneInput.value);
 
             feedback.textContent = 'Спасибо! Мы скоро вам перезвоним';
             feedback.style.color = '#4CAF50';
@@ -233,17 +323,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Главная функция инициализации
     const initApp = async () => {
-        initMenu();
+        initMenu(); // Восстанавливаем эту строку
         initModal();
         initScrollToTop();
         initConsultationForm();
-        
+
         await loadAndRenderCards();
-        initSlider();
     };
 
     // Запуск приложения
     initApp().catch(error => {
         console.error('Ошибка инициализации:', error);
     });
+
+
 });

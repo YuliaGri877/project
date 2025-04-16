@@ -1,0 +1,29 @@
+/* Swiper styles */
+.servicesSwiper {
+    width: 100%;
+    padding: 20px 0 50px;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #4CAF50;
+    top: 40%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #4CAF50;
+}
+
+@media (max-width: 768px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}

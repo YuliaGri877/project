@@ -1,55 +1,40 @@
-/* Контейнер для карточек */
+/* Стили для карточек услуг */
 .services__list {
     display: flex;
-    overflow-x: auto; /* Горизонтальная прокрутка */
-    scroll-snap-type: x mandatory; /* Фиксация карточек при прокрутке */
-    gap: 20px; /* Отступ между карточками */
-    padding-bottom: 20px; /* Для видимости кнопок */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Карточки услуг */
 .services__card {
-    flex: 0 0 calc(33.33% - 20px); /* 3 карточки в ряд */
-    max-width: 300px; /* Максимальная ширина карточки */
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    scroll-snap-align: start; /* Фиксация каждой карточки */
+    width: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
     transition: transform 0.3s ease;
-}
-
-/* Скрываем стандартную полосу прокрутки */
-.services__list::-webkit-scrollbar {
-    display: none;
-}
-
-.services__list {
-    -ms-overflow-style: none; /* IE и Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Кнопки навигации */
-.services__controls {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.services__prev-button,
-.services__next-button {
-    background-color: #38BCEA;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.services__prev-button:hover,
-.services__next-button:hover {
-    background-color: #2a96b8;
+.services__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.services__card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.services__card-name {
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.services__text {
+    padding: 0 15px 15px;
+    color: #555;
 }

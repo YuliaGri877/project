@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/recording-popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <img src="images/zub-logo.png" alt="Логотип" class="header__logo" width="50" height="50">
         <nav class="header__nav">
             <ul class="header__list">
-               <!-- <li class="header__item"><a href="index.html"
+                <!-- <li class="header__item"><a href="index.html"
                         class="header__item-link header__item-link--active">Главная</a></li>
                 <li class="header__item"><a href="service.html" class="header__item-link">Услуги</a></li>
                 <li class="header__item"><a href="patient.html" class="header__item-link">Пациенту</a></li>
@@ -47,15 +48,9 @@
             <h2 class="services__title">Услуги</h2>
             <p class="services__description">Мы постарались сделать прайс максимально простым и понятным.</p>
 
-            <!-- Кнопки навигации -->
-            <div class="services__controls">
-                <button class="services__prev-button button">← Влево</button>
-                <button class="services__next-button button">Вправо →</button>
-            </div>
-
-            <!-- Карточки услуг -->
-            <div class="services__list">
-                <!--<div class="services__card">
+            <div class="swiper servicesSwiper">
+                <div class="swiper-wrapper services__list">
+                    <!--<div class="services__card">
                     <img class="services__card-image" src="images/services_1.jpg" alt="Услуги" />
                     <p class="services__card-name">Лечение зубов</p>
                     <div class="services__text" hidden>
@@ -112,8 +107,13 @@
                         Современные методы удаления зубов, операции по восстановлению десен и другие хирургические
                         процедуры.
                     </div>
+                </div>-->
                 </div>
-            </div> -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Add pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
 
         <!-- Секция Specialists -->
@@ -222,6 +222,7 @@
     </footer>
 
     <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -13,6 +13,7 @@
 /* Подключение стилей относящихся к main */
 @import "main.css";
 /* Подключение универсальных стилей */
+
 @import "typography.css";
 @import "main.css";
 @import "services.css";
@@ -28,3 +29,4 @@
 @import "contacts.css";
 @import "recording.css";
 @import "promo.css";
+@import "swiper.css";
