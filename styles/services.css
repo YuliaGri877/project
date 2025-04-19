@@ -1,6 +1,6 @@
 /* Стили для секции Услуг с фиксированным отображением по 3 карточки в ряд */
 .services {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,7 +25,8 @@
 
 /* Обеспечиваем фиксированное отображение по 3 карточки */
 .swiper-slide {
-    width: calc(25% - 20px) !important;
+    width: calc(30% - 20px) !important; /* Уменьшаем ширину карточек */
+   
 }
 
 /* Карточки услуг внутри свайпера */
@@ -39,9 +40,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Содержимое будет располагаться вертикально */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: hidden; /* Ограничиваем выход содержимого за рамки */
+    max-height: auto; /* Ограничиваем высоту карточки */
 }
 
 /* Изображение в карточке */
