@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `).join('') + `
             <li class="header__item">
                 <button class="header__consultation-button button" data-modal-open>
-                    Заказать звонок
+                    Записаться на прием
                 </button>
             </li>
         `;

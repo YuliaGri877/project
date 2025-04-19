@@ -13,7 +13,7 @@
     <div class="preloader">
         <div class="loader"></div>
     </div>
-    
+
     <header class="header">
         <h1 class="header__title">Стоматологическая клиника</h1>
         <img src="images/zub-logo.png" alt="Логотип" class="header__logo" width="50" height="50">
@@ -29,82 +29,211 @@
         </nav>
     </header>
     <main class="container">
-        <!-- Секция Услуг -->
-        <section class="services">
-            <h1 class="services__title">Наши Услуги</h1>
-            <p class="services__description">Мы предлагаем широкий спектр стоматологических услуг, чтобы обеспечить
-                здоровье и красоту вашей улыбки.</p>
 
-            <!-- Список услуг -->
-            <div class="services__list">
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_1.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Лечение зубов</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_3.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Профилактическая гигиена полости рта</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_2.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Ортодонтия (брекеты)</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_7.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Детская стоматология</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_5.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Имплантация зубов</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_8.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Изготовление и установка виниров</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_6.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Протезирование зубов</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-image" src="images/services_4.jpg" alt="Услуги" width="250"
-                        height="250" />
-                    <p class="services__card-name">Хирургические вмешательства</p>
-                </div>
-            </div>
-        </section>
+            <!-- Секция Услуг -->
+            <section class="services">
+                <h1 class="services__title">Наши Услуги</h1>
+                <p class="services__description">Мы предлагаем широкий спектр стоматологических услуг, чтобы обеспечить
+                    здоровье и красоту вашей улыбки.</p>
 
-        <!-- Секция Контактов -->
-        <section class="contacts">
-            <h3 class="contacts__title">Контакты</h3>
-            <div class="contacts__info">
-                <p class="contacts__address">Москва, Эшпая 1А</p>
-                <p class="contacts__hours">С 09:00 - 20:00, пн-сб</p>
-                <p class="contacts__phone">Телефон: <a href="tel:+79007878787" class="contacts__phone-link">+7 900 787
-                        87 87</a></p>
-            </div>
-        </section>
+                <!-- Список услуг - последовательное отображение с новым классом -->
+                <div class="service-catalog">
+                    <!-- Услуга 1 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_1.jpg" alt="Лечение зубов" width="250"
+                            height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Лечение зубов</h3>
+                            <p class="service-catalog__description">
+                                Качественное лечение кариеса, пульпита и периодонтита с использованием современных
+                                технологий.
+                                Наши специалисты применяют безболезненные методики и материалы последнего поколения,
+                                обеспечивающие
+                                долговечность пломб и эстетичный вид. Мы лечим зубы с использованием микроскопа, что
+                                позволяет
+                                сохранить максимум здоровых тканей и предотвратить осложнения. Гарантия на все виды
+                                лечения.
+                            </p>
+                            <p class="service-catalog__price">от 2500 ₽</p>
+                        </div>
+                    </div>
 
-        <!-- Секция Онлайн консультации -->
-        <section class="consultation" id="consultation">
-            <h2 class="consultation__title">Онлайн консультация</h2>
-            <div class="consultation__form">
-                <p class="consultation__description">Укажите ваш номер телефона для обратного звонка:</p>
-                <input type="tel" id="phone" class="consultation__input" placeholder="Телефон" required>
-                <button type="button" class="consultation__button button">Записаться на прием</button>
-                <div class="feedback-message" style="display: none; margin-top: 10px;"></div>
-            </div>
-        </section>
+                    <!-- Услуга 2 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_3.jpg"
+                            alt="Профилактическая гигиена полости рта" width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Профилактическая гигиена полости рта</h3>
+                            <p class="service-catalog__description">
+                                Профессиональная чистка зубов, удаление зубного камня и налета для поддержания здоровья
+                                полости рта.
+                                Процедура включает ультразвуковую чистку, Air Flow (удаление налета потоком воды и
+                                воздуха с частицами
+                                специального порошка), полировку зубов и покрытие фторлаком. Регулярная профгигиена
+                                каждые 6 месяцев
+                                помогает предотвратить развитие кариеса, заболеваний десен и сохранить белизну зубов.
+                            </p>
+                            <p class="service-catalog__price">от 3000 ₽</p>
+                        </div>
+                    </div>
+
+                    <!-- Услуга 3 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_2.jpg" alt="Ортодонтия (брекеты)"
+                            width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Ортодонтия (брекеты)</h3>
+                            <p class="service-catalog__description">
+                                Выравнивание зубов и коррекция прикуса с помощью современных брекет-систем и элайнеров.
+                                Мы предлагаем
+                                различные типы брекетов: металлические, керамические, сапфировые и лингвальные
+                                (невидимые). Также
+                                доступны прозрачные элайнеры, которые практически незаметны на зубах. Перед началом
+                                лечения проводится
+                                полная диагностика, включая 3D-моделирование, что позволяет спрогнозировать результат.
+                                Наши ортодонты
+                                имеют многолетний опыт и помогут выбрать оптимальный вариант исправления прикуса.
+                            </p>
+                            <p class="service-catalog__price">от 40000 ₽</p>
+                        </div>
+                    </div>
+
+                    <!-- Услуга 4 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_7.jpg" alt="Детская стоматология"
+                            width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Детская стоматология</h3>
+                            <p class="service-catalog__description">
+                                Безболезненное лечение для детей всех возрастов в комфортной обстановке с индивидуальным
+                                подходом.
+                                Наши детские стоматологи умеют найти подход к самым маленьким и тревожным пациентам. В
+                                клинике создана
+                                специальная атмосфера, помогающая детям расслабиться. Мы используем щадящие методики
+                                лечения и
+                                безопасные анестетики. Помимо лечения, мы обучаем детей правильной гигиене полости рта и
+                                проводим
+                                профилактические процедуры, включая герметизацию фиссур и фторирование, чтобы
+                                предотвратить развитие
+                                кариеса.
+                            </p>
+                            <p class="service-catalog__price">от 1800 ₽</p>
+                        </div>
+                    </div>
+
+                    <!-- Услуга 5 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_5.jpg" alt="Имплантация зубов"
+                            width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Имплантация зубов</h3>
+                            <p class="service-catalog__description">
+                                Восстановление утраченных зубов с помощью надежных имплантатов ведущих производителей.
+                                Мы используем
+                                имплантаты премиум-класса (Straumann, Nobel Biocare, Astra Tech), которые имеют
+                                пожизненную гарантию
+                                от производителя. Процедура проводится в комфортных условиях под местной анестезией или
+                                седацией.
+                                Возможна одномоментная имплантация (установка имплантата сразу после удаления зуба) и
+                                немедленная
+                                нагрузка (установка временной коронки в день операции). Перед процедурой проводится
+                                компьютерное
+                                планирование и при необходимости костная пластика.
+                            </p>
+                            <p class="service-catalog__price">от 35000 ₽</p>
+                        </div>
+                    </div>
+
+                    <!-- Услуга 6 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_8.jpg"
+                            alt="Изготовление и установка виниров" width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Изготовление и установка виниров</h3>
+                            <p class="service-catalog__description">
+                                Тонкие керамические накладки для коррекции формы, цвета и положения зубов. Виниры —
+                                идеальное решение
+                                для создания голливудской улыбки. Мы предлагаем различные типы виниров: классические
+                                керамические,
+                                ультратонкие (без обточки зубов), композитные (устанавливаются за одно посещение). Перед
+                                процедурой
+                                проводится цифровое моделирование улыбки (Digital Smile Design), что позволяет увидеть
+                                результат до
+                                начала лечения. Наши керамисты создают виниры индивидуально для каждого пациента,
+                                учитывая особенности
+                                лица, цвет кожи и глаз.
+                            </p>
+                            <p class="service-catalog__price">от 15000 ₽</p>
+                        </div>
+                    </div>
+
+                    <!-- Услуга 7 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_6.jpg" alt="Протезирование зубов"
+                            width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Протезирование зубов</h3>
+                            <p class="service-catalog__description">
+                                Восстановление утраченных или поврежденных зубов с помощью съемных и несъемных протезов.
+                                Мы предлагаем
+                                все виды протезирования: коронки, мостовидные протезы, бюгельные протезы на замках,
+                                полные съемные
+                                протезы, условно-съемные протезы на имплантатах. Используем только современные
+                                биосовместимые материалы:
+                                безметалловую керамику, диоксид циркония, высокопрочные полимеры. Наша зуботехническая
+                                лаборатория
+                                оснащена CAD/CAM системой, что позволяет изготавливать высокоточные протезы в кратчайшие
+                                сроки.
+                                Предоставляем гарантию на все виды протезирования.
+                            </p>
+                            <p class="service-catalog__price">от 25000 ₽</p>
+                        </div>
+                    </div>
+
+                    <!-- Услуга 8 -->
+                    <div class="service-catalog__item">
+                        <img class="service-catalog__image" src="images/services_4.jpg"
+                            alt="Хирургические вмешательства" width="250" height="250" />
+                        <div class="service-catalog__content">
+                            <h3 class="service-catalog__name">Хирургические вмешательства</h3>
+                            <p class="service-catalog__description">
+                                Современные методы удаления зубов и другие хирургические процедуры с минимальным
+                                дискомфортом. Мы
+                                проводим атравматичное удаление зубов любой сложности, включая ретинированные и
+                                дистопированные зубы
+                                мудрости. Также выполняем хирургическое лечение кист, гранулем, синус-лифтинг
+                                (наращивание костной
+                                ткани в области верхнечелюстной пазухи), пластику десны, лоскутные операции при
+                                пародонтите. Все
+                                процедуры проводятся с использованием современного оборудования, качественных
+                                анестетиков и
+                                пьезохирургических инструментов, что обеспечивает безболезненность и быстрое
+                                восстановление.
+                            </p>
+                            <p class="service-catalog__price">от 3500 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция Онлайн консультации -->
+            <section class="consultation" id="consultation">
+                <h2 class="consultation__title">Онлайн консультация</h2>
+                <div class="consultation__form">
+                    <p class="consultation__description">Укажите ваш номер телефона для обратного звонка:</p>
+                    <input type="tel" id="phone" class="consultation__input" placeholder="Телефон" required>
+                    <button type="button" class="consultation__button button">Записаться на прием</button>
+                    <div class="feedback-message" style="display: none; margin-top: 10px;"></div>
+                </div>
+            </section>
     </main>
+
     <footer class="footer">
+        <p class="footer__text">Москва, Эшпая 1А</p>
+        <p class="footer__text">С 09:00 - 20:00, пн-сб</p>
+        <p class="footer__text">Телефон: <a href="tel:+79007878787" class="contacts__phone-link">+7 900 787
+                87 87</a></p>
         <p class="footer__text">© 2025 Dental Studio. Все права защищены.</p>
-        <p class="footer__address">Москва, Эшпая 1А</p>
     </footer>
 
     <script src="js/script.js"></script>
