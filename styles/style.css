@@ -15,7 +15,6 @@
 /* Подключение универсальных стилей */
 
 @import "typography.css";
-@import "main.css";
 @import "services.css";
 @import "specialists.css";
 @import "certificates.css";

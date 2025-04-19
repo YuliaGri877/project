@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Инициализация Swiper с правильной горизонтальной прокруткой
             // Инициализация Swiper с исправленными настройками для малого количества слайдов
             const slides = document.querySelectorAll('.swiper-slide');
-            const enableLoop = slides.length > 3; // Включаем loop только если слайдов больше 3
             // Инициализация Swiper для карточек услуг
             const swiper = new Swiper('.servicesSwiper', {
                 slidesPerView: 1, // По 4 карточки в ряд на широких экранах, как у специалистов
@@ -94,23 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `).join('');
 
-                servicesList.innerHTML = services.map(service => `
-                    <div class="swiper-slide">
-                        <div class="services__card">
-                            <div class="services__image-container">
-                                <img class="services__card-image" 
-                                     src="${service.icon.replace('icon/', '')}" 
-                                     alt="${service.title}">
-                            </div>
-                            <div class="services__content">
-                                <p class="services__card-name">${service.title}</p>
-                                <div class="services__text" hidden>
-                                    ${service.description}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
                 // Обработчики для раскрытия текста
                 servicesList.querySelectorAll('.services__card').forEach(card => {
                     card.addEventListener('click', function () {
@@ -351,6 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Запуск приложения
     initApp().catch(error => {
         console.error('Ошибка инициализации:', error);
+        initSlider();
     });
 
 
