@@ -15,13 +15,22 @@
 
 /* Содержимое всплывающего окна */
 .recording-popup__content {
-    background-color: #fff;
+    background-color: white;
+    padding: 30px;
     border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+    width: 80%;
+    max-width: 600px; /* Увеличиваем ширину формы */
+    max-height: 700px; /* Оставляем ограничение по высоте */
+    overflow-y: auto;
+    position: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: popupFadeIn 0.3s ease-out;
+}
+
+.recording-popup__form {
+    display: flex;
+    flex-direction: column;
+    gap: -10px; /* Увеличиваем расстояние между элементами */
 }
 
 /* Кнопка закрытия */

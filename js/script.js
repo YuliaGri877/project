@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 `).join('');
             }
 
-            // Инициализация Swiper с правильной горизонтальной прокруткой
-            // Инициализация Swiper с исправленными настройками для малого количества слайдов
+
+            // Инициализация Swiper 
             const slides = document.querySelectorAll('.swiper-slide');
             // Инициализация Swiper для карточек услуг
             const swiper = new Swiper('.servicesSwiper', {
                 slidesPerView: 1,
                 spaceBetween: 30,
-                slidesPerGroup: 2, 
+                slidesPerGroup: 2,
                 loop: true,
                 loopedSlides: services.length,
                 navigation: {
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const form = modal.querySelector('.recording-popup__form');
 
-        // Load saved form data if exists
+        // 1. Загрузка сохраненных данных из LocalStorage
         const loadFormData = () => {
             const savedData = localStorage.getItem('appointmentFormData');
             if (savedData) {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        // Save form data when inputs change
+        // 2. Сохранение данных в LocalStorage
         const saveFormData = () => {
             if (form) {
                 const formData = {
@@ -180,57 +180,70 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: form.elements.phone.value,
                     preferredDate: form.elements.preferredDate.value,
                     preferredTime: form.elements.preferredTime.value,
-                    service: form.elements.service.value
+                    service: form.elements.service.value,
                 };
                 localStorage.setItem('appointmentFormData', JSON.stringify(formData));
             }
         };
 
-        // Add event listeners for form inputs
+        // 3. Очистка данных из LocalStorage после отправки формы
+        const clearFormData = () => {
+            localStorage.removeItem('appointmentFormData');
+        };
+
+        // 4. Добавляем обработчики событий на поля формы
         if (form) {
             form.querySelectorAll('input, select').forEach(input => {
-                input.addEventListener('change', saveFormData);
-                input.addEventListener('keyup', saveFormData);
+                input.addEventListener('input', saveFormData); // Сохраняем при вводе
+                input.addEventListener('change', saveFormData); // Сохраняем при изменении
             });
 
+            // Обработчик отправки формы
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                // Here you would normally send the form data
+
+                // Отправка данных (здесь можете подключить серверную логику)
                 console.log('Form submitted:', {
                     fullName: this.elements.fullName.value,
                     phone: this.elements.phone.value,
                     preferredDate: this.elements.preferredDate.value,
                     preferredTime: this.elements.preferredTime.value,
-                    service: this.elements.service.value
+                    service: this.elements.service.value,
                 });
 
-                // Clear saved data after submission
-                localStorage.removeItem('appointmentFormData');
+                // Очищаем данные после успешной отправки
+                clearFormData();
                 this.reset();
 
-                // Show success message
+                // Показываем сообщение об успешной записи
                 alert('Ваша запись успешно сохранена! Мы свяжемся с вами для подтверждения.');
+
+                // Закрываем модальное окно
                 closeModal();
             });
         }
 
+        // 5. Открытие модального окна
         const openModal = () => {
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-            loadFormData();
+            loadFormData(); // Загружаем данные при открытии формы
         };
 
+        // 6. Закрытие модального окна
         const closeModal = () => {
             modal.style.display = 'none';
             document.body.style.overflow = '';
         };
 
+        // Привязываем обработчики к кнопкам открытия и закрытия модального окна
         document.querySelectorAll('[data-modal-open]').forEach(btn => {
             btn.addEventListener('click', openModal);
         });
 
         document.getElementById('close-recording-form')?.addEventListener('click', closeModal);
 
+        // Закрытие формы при нажатии на фон
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeModal();
         });
