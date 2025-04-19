@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const enableLoop = slides.length > 3; // Включаем loop только если слайдов больше 3
             // Инициализация Swiper для карточек услуг
             const swiper = new Swiper('.servicesSwiper', {
-                slidesPerView: 4, // По 4 карточки в ряд на широких экранах, как у специалистов
+                slidesPerView: 1, // По 4 карточки в ряд на широких экранах, как у специалистов
                 spaceBetween: 20, // Такой же отступ как у карточек специалистов
                 loop: true,
                 loopedSlides: services.length,
@@ -73,22 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     clickable: true,
                 },
                 breakpoints: {
-                    // Те же брейкпоинты, как в медиа-запросах для специалистов
-                    320: {
-                        slidesPerView: 1, // 1 колонка на мобильных
-                    },
-                    480: {
-                        slidesPerView: 1, // 1 колонка на маленьких экранах
-                    },
                     768: {
                         slidesPerView: 2, // 2 колонки на планшетах
                     },
                     1024: {
                         slidesPerView: 3, // 3 колонки на небольших десктопах
                     },
-                    1200: {
-                        slidesPerView: 4, // 4 колонки на широких экранах
-                    }
                 }
             });
 

@@ -118,7 +118,7 @@
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-    color: #2c7be5;
+    color: #38BCEA;
 }
 
 .recording-popup__form {
@@ -145,7 +145,7 @@
 .recording-popup__form-input:focus,
 .recording-popup__form-select:focus {
     outline: none;
-    border-color: #2c7be5;
+    border-color: #38BCEA;
     box-shadow: 0 0 0 2px rgba(44, 123, 229, 0.2);
 }
 
@@ -162,7 +162,7 @@
 }
 
 .recording-popup__form-button:hover {
-    background-color: #1a68d1;
+    background-color: #38BCEA;
 }
 
 @keyframes popupFadeIn {
