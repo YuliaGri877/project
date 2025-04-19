@@ -59,11 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 spaceBetween: 20, // Такой же отступ как у карточек специалистов
                 loop: true,
                 loopedSlides: services.length,
-                speed: 500,
-                autoplay: {
-                    delay: 5000, // Автоматическая прокрутка каждые 5 секунд
-                    disableOnInteraction: false, // Не останавливать при взаимодействии
-                },
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
