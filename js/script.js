@@ -271,37 +271,50 @@ document.addEventListener('DOMContentLoaded', function () {
         const form = document.querySelector('.consultation__form');
         if (!form) return;
 
+        const phoneInput = form.querySelector('#phone');
+        const submitBtn = form.querySelector('button[type="button"]');
+        const feedback = form.querySelector('.feedback-message');
+
         // Load saved phone if exists
         const savedPhone = localStorage.getItem('consultationPhone');
-        if (savedPhone) {
-            const phoneInput = form.querySelector('#phone');
-            if (phoneInput) phoneInput.value = savedPhone;
+        if (savedPhone && phoneInput) {
+            phoneInput.value = savedPhone;
         }
 
-        form.addEventListener('submit', function (e) {
+        // Обработчик для кнопки
+        submitBtn?.addEventListener('click', function (e) {
             e.preventDefault();
-            const phoneInput = this.querySelector('#phone');
-            const feedback = this.querySelector('.feedback-message');
 
-            if (!phoneInput.value.trim()) {
-                feedback.textContent = 'Пожалуйста, введите номер телефона';
-                feedback.style.color = '#ff4d4d';
-                feedback.style.display = 'block';
+            if (!phoneInput || !phoneInput.value.trim()) {
+                showFeedback('Пожалуйста, введите номер телефона', 'error');
+                return;
+            }
+
+            // Validate phone number (пример простой валидации)
+            const phoneRegex = /^[\d\s\-\+\(\)]{10,15}$/;
+            if (!phoneRegex.test(phoneInput.value)) {
+                showFeedback('Пожалуйста, введите корректный номер телефона', 'error');
                 return;
             }
 
             // Save to localStorage
             localStorage.setItem('consultationPhone', phoneInput.value);
 
-            feedback.textContent = 'Спасибо! Мы скоро вам перезвоним';
-            feedback.style.color = '#4CAF50';
-            feedback.style.display = 'block';
+            showFeedback('Спасибо! Мы скоро вам перезвоним', 'success');
             phoneInput.value = '';
+        });
+
+        function showFeedback(message, type) {
+            if (!feedback) return;
+
+            feedback.textContent = message;
+            feedback.style.color = type === 'error' ? '#ff4d4d' : '#4CAF50';
+            feedback.style.display = 'block';
 
             setTimeout(() => {
                 feedback.style.display = 'none';
             }, 3000);
-        });
+        }
     };
 
     // 7. Динамическое меню
