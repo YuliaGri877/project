@@ -54,8 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const slides = document.querySelectorAll('.swiper-slide');
             // Инициализация Swiper для карточек услуг
             const swiper = new Swiper('.servicesSwiper', {
-                slidesPerView: 1, // По 4 карточки в ряд на широких экранах, как у специалистов
-                spaceBetween: 20, // Такой же отступ как у карточек специалистов
+                slidesPerView: 1,
+                spaceBetween: 30,
+                slidesPerGroup: 2, 
                 loop: true,
                 loopedSlides: services.length,
                 navigation: {

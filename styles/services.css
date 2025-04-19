@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
 }
 
 /* Заголовок и описание секции */
@@ -21,12 +21,17 @@
     width: auto;
     padding: 20px 0 50px;
     overflow: hidden;
+    padding-bottom: 20px;
 }
 
 /* Обеспечиваем фиксированное отображение по 3 карточки */
 .swiper-slide {
-    width: calc(30% - 20px) !important; /* Уменьшаем ширину карточек */
-   
+    width: calc(30% - 20px) !important;
+    /* Уменьшаем ширину карточек */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(30% - 20px) !important;
 }
 
 /* Карточки услуг внутри свайпера */
@@ -40,11 +45,12 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
-    flex-direction: column; /* Содержимое будет располагаться вертикально */
+    flex-direction: column;
+    /* Содержимое будет располагаться вертикально */
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden; /* Ограничиваем выход содержимого за рамки */
-    max-height: auto; /* Ограничиваем высоту карточки */
+    overflow: hidden;
+    max-height: auto;
 }
 
 /* Изображение в карточке */
@@ -78,14 +84,23 @@
 .swiper-button-next,
 .swiper-button-prev {
     color: #38BCEA;
-    top: auto;
+    top: 50%;
+
+    /* Стрелки всегда поверх карточек */
     width: 40px;
     height: 40px;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-size: 20px;
+    font-size: 10px;
+}
+
+
+.swiper-pagination {
+    bottom: 50px;
+    text-align: center;
+    z-index: 10;
 }
 
 .swiper-pagination-bullet {
@@ -99,6 +114,7 @@
 
 @media (max-width: 1024px) {
     .services__card {
-        width: calc(33.33% - 20px); /* 3 колонки на экранах до 1024px */
+        width: calc(33.33% - 20px);
+        /* 3 колонки на экранах до 1024px */
     }
 }
